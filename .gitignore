@@ -213,6 +213,6 @@ __marimo__/
 #  These files are used for local development and should not be committed to version control.
 *.html
 *.png
-allurereports/*.txt
-allurereports/*.json
+allure_reports/*.txt
+allure_reports/*.json
 logs/*.log
