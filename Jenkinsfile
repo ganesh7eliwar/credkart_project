@@ -63,10 +63,5 @@ pipeline {
         failure {
             echo 'Test or setup failed. Check logs.'
         }
-
-        cleanup {
-            echo 'Cleaning up workspace...'
-            deleteDir()
-        }
     }
 }
