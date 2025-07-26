@@ -77,24 +77,10 @@ pipeline {
 
         success {
             echo 'All tests passed!'
-            mail to: '7eliwarganesh@gmail.com'
-                 subject: "Build Successful: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: """
-                      Build URL: ${env.BUILD_URL}
-                      Test results directory: ${env.REPORT_DIR}
-                      Check Allure Report and logs for more details.
-                    """
         }
 
         failure {
             echo 'Test or setup failed. Check logs.'
-            mail to: '7eliwarganesh@gmail.com'
-                 subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: """
-                      Build URL: ${env.BUILD_URL}
-                      Test results directory: ${env.REPORT_DIR}
-                      Check Allure Report and logs for more details.
-                    """
         }
 
         cleanup {
