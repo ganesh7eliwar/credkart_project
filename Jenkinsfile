@@ -26,9 +26,9 @@ pipeline {
             }
         }
 
-        stage('Run OpenCart Tests') {
+        stage('Run CredKart Tests') {
             steps {
-                echo 'Running Selenium tests for OpenCart...'
+                echo 'Running Selenium tests for CredKart...'
                 bat '''
                     call .venv\\Scripts\\activate
                     pytest -v -s testcases/ --browser chrome --alluredir=allure_reports
