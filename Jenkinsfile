@@ -5,10 +5,6 @@ pipeline {
         VENV_DIR = '.venv'  // Local virtual environment directory
     }
 
-    parameters {
-        string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to use for tests')
-    }
-
     stages {
         stage('Checkout Source') {
             steps {
@@ -20,44 +16,23 @@ pipeline {
         stage('Setup Python Environment') {
             steps {
                 echo 'Setting up Python virtual environment...'
-                bat """
-                    if not exist ${VENV_DIR} (
-                        python -m venv ${VENV_DIR}
+                bat '''
+                    if not exist .venv (
+                        python -m venv .venv
                     )
-                    call ${VENV_DIR}\\Scripts\\activate
+                    call .venv\\Scripts\\activate
                     pip install --quiet --no-input --disable-pip-version-check --requirement requirements.txt
-                """
+                '''
             }
         }
 
-        stage('Lint Code') {
+        stage('Run OpenCart Tests') {
             steps {
-                echo 'Running flake8 linting...'
-                bat """
-                    call ${VENV_DIR}\\Scripts\\activate
-                    flake8 . --exit-zero
-                """
-            }
-        }
-
-        stage('Prepare Report Directory') {
-            steps {
-                script {
-                    env.TIMESTAMP = new Date().format("ddMMyyyyHHmmss")
-                    env.REPORT_DIR = "allure_reports_${env.TIMESTAMP}"
-                }
-            }
-        }
-
-        stage('Run CredKart Tests') {
-            steps {
-                echo 'Running Selenium tests for CredKart...'
-                retry(2) {
-                    bat """
-                        call ${VENV_DIR}\\Scripts\\activate
-                        pytest -v -s testcases/ --browser ${params.BROWSER} --alluredir=${env.REPORT_DIR}
-                    """
-                }
+                echo 'Running Selenium tests for OpenCart...'
+                bat '''
+                    call .venv\\Scripts\\activate
+                    pytest -v -s testcases/ --browser chrome --alluredir=allure_reports
+                '''
             }
         }
     }
@@ -71,7 +46,7 @@ pipeline {
             allure([
                 includeProperties: false,
                 jdk: '',
-                results: [[path: "${env.REPORT_DIR}"]]
+                results: [[path: 'allure_reports']]
             ])
         }
 
@@ -81,11 +56,6 @@ pipeline {
 
         failure {
             echo 'Test or setup failed. Check logs.'
-        }
-
-        cleanup {
-            echo 'Cleaning up workspace...'
-            deleteDir()
         }
     }
 }
