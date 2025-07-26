@@ -1,0 +1,8 @@
+[32mINFO    [0m TestURLCheck:test_url_check.py:12 ********** Test Session Started. **********
+[32mINFO    [0m TestURLCheck:test_url_check.py:14 Driver Setup Successful.
+[32mINFO    [0m TestURLCheck:test_url_check.py:15 Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="ab796049b3f544b793611bb6a0bf9fc3")>
+[32mINFO    [0m TestURLCheck:test_url_check.py:19 Entered into If Block.
+[32mINFO    [0m TestURLCheck:test_url_check.py:20 Title of the Page is: CredKart
+[32mINFO    [0m TestURLCheck:test_url_check.py:21 Test URL Check Passed
+[32mINFO    [0m TestURLCheck:test_url_check.py:23 Screenshot Captured.
+[32mINFO    [0m TestURLCheck:test_url_check.py:32 ========== Test Session Finished. ==========

@@ -1,0 +1,13 @@
+[32mINFO    [0m TestLogin:test_login.py:15 ********** Test Session Started. **********
+[32mINFO    [0m TestLogin:test_login.py:17 Driver Setup Successful.
+[32mINFO    [0m TestLogin:test_login.py:18 Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="21c5a394d3c1ae468fd2bb2b2374c979")>
+[32mINFO    [0m TestLogin:test_login.py:21 Clicked on Login Button Link and navigate to Login Page.
+[32mINFO    [0m TestLogin:test_login.py:23 Entered Name in Name Text Box. --> david_shearing@yahoomail.com
+[32mINFO    [0m TestLogin:test_login.py:25 Entered Password in Name Text Box. --> $lA6(3Bg1#vI!uzFE
+[32mINFO    [0m TestLogin:test_login.py:27 Clicked on Login Button.
+[32mINFO    [0m TestLogin:test_login.py:30 Entered info If block.
+[32mINFO    [0m TestLogin:test_login.py:31 User Login Successful.
+[32mINFO    [0m TestLogin:test_login.py:32 Test Login Passed.
+[32mINFO    [0m TestLogin:test_login.py:34 Captured Screenshot.
+[32mINFO    [0m TestLogin:test_login.py:37 Clicked on Logout Button
+[32mINFO    [0m TestLogin:test_login.py:47 ========== Test Session Finished. ==========

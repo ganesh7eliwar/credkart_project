@@ -1,0 +1,43 @@
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:15 ********** Test Session Started. **********
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:17 Driver Setup Successful.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:18 Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="9c6296d4376fee1a47abc6bdb2b050e6")>
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:20 Number of Rows in Table: 5 including Header.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:28 Entered into for loop, Interation No.: 1.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:34 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:36 Entered Email Address: david_shearing@yahoomail.com.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:38 Entered Password: $lA6(3Bg1#vI!uzFE.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:40 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:43 Entered into If Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:45 Entered into Nested If Block within If Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:47 Appended data to Status List.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:49 Clicked on Logout DropDown Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:51 Clicked on Logout Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:28 Entered into for loop, Interation No.: 2.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:34 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:36 Entered Email Address: david_shearing@yahoomail.com.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:38 Entered Password: $lA6(3g1#vI!uzFE.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:40 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:59 Entered into Elif Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:70 Entered into Else Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:72 Appended Data to Status List.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:28 Entered into for loop, Interation No.: 3.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:34 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:36 Entered Email Address: david_shearing@gmail.com.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:38 Entered Password: $lA6(3Bg1#vI!uzFE.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:40 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:59 Entered into Elif Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:70 Entered into Else Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:72 Appended Data to Status List.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:28 Entered into for loop, Interation No.: 4.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:34 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:36 Entered Email Address: david_shearing@credence.in.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:38 Entered Password: $lA6(3g1#vI!uzFE.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:40 Clicked on Login Button.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:59 Entered into Elif Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:70 Entered into Else Block.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:72 Appended Data to Status List.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:75 Entered into If Block for Assertion.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:76 If Fail not in Status List Testcase Passed.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:77 Status List: ['Pass', 'Pass', 'Pass', 'Pass']
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:78 Test "Test_Login_DDT" Passed.
+[32mINFO    [0m TestLoginDDT:test_login_ddt.py:87 ========== Test Session Finished. ==========

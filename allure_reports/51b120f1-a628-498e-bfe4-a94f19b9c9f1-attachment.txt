@@ -1,0 +1,15 @@
+[32mINFO    [0m TestRegister:test_register.py:14 ********** Test Session Started. **********
+[32mINFO    [0m TestRegister:test_register.py:16 Driver Setup Successful.
+[32mINFO    [0m TestRegister:test_register.py:18 Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="1e23b1ceec9c7a0741d36238fcd3f42a")>
+[32mINFO    [0m TestRegister:test_register.py:20 Clicked on Register Button Link and navigate to Register Page.
+[32mINFO    [0m TestRegister:test_register.py:22 Entered Name in Name Text Box. --> Chad Parker
+[32mINFO    [0m TestRegister:test_register.py:24 Entered Email in Email Text Box. --> chad_parker@rediffmail.com
+[32mINFO    [0m TestRegister:test_register.py:26 Entered Password in Password Text Box. --> B0iV%9Uai$Qt(4
+[32mINFO    [0m TestRegister:test_register.py:28 Entered Password in Confirm Password Text Box. B0iV%9Uai$Qt(4
+[32mINFO    [0m TestRegister:test_register.py:30 Clicked on Register Button.
+[32mINFO    [0m TestRegister:test_register.py:33 Entered info If block.
+[32mINFO    [0m TestRegister:test_register.py:34 Chad Parker == Chad Parker
+[32mINFO    [0m TestRegister:test_register.py:35 User Registration Successful.
+[32mINFO    [0m TestRegister:test_register.py:36 Test Register Passed.
+[32mINFO    [0m TestRegister:test_register.py:38 Captured Screenshot.
+[32mINFO    [0m TestRegister:test_register.py:48 ========== Test Session Finished. ==========

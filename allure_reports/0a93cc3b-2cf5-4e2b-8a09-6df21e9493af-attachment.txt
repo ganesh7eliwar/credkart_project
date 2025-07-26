@@ -1,0 +1,17 @@
+[32mINFO    [0m TestLoginParam:test_login_param.py:12 ********** Test Session Started. **********
+[32mINFO    [0m TestLoginParam:test_login_param.py:14 Driver Setup Successful.
+[32mINFO    [0m TestLoginParam:test_login_param.py:15 Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="4aaf9b0d63aa12b1f6310924e2137528")>
+[32mINFO    [0m TestLoginParam:test_login_param.py:20 Clicked on login button.
+[32mINFO    [0m TestLoginParam:test_login_param.py:22 Inserted data into Email textbox. --> david_shearing@yahoomail.com
+[32mINFO    [0m TestLoginParam:test_login_param.py:24 Inserted data into first name textbox. --> $lA6(3Bg1#vI!uzFE
+[32mINFO    [0m TestLoginParam:test_login_param.py:26 Clicked on login button.
+[32mINFO    [0m TestLoginParam:test_login_param.py:29 Entered into if Block
+[32mINFO    [0m TestLoginParam:test_login_param.py:31 Entered into Nested if Block
+[32mINFO    [0m TestLoginParam:test_login_param.py:33 Appended data to Status List.
+[32mINFO    [0m TestLoginParam:test_login_param.py:35 Clicked on log out dropdown button.
+[32mINFO    [0m TestLoginParam:test_login_param.py:37 Clicked on log out button
+[32mINFO    [0m TestLoginParam:test_login_param.py:59 Entered into If Block for Assertion.
+[32mINFO    [0m TestLoginParam:test_login_param.py:60 If Fail not in Status List Testcase Passed.
+[32mINFO    [0m TestLoginParam:test_login_param.py:61 Status List: ['Pass']
+[32mINFO    [0m TestLoginParam:test_login_param.py:62 Test "Test_Login_DDT" Passed.
+[32mINFO    [0m TestLoginParam:test_login_param.py:71 ========== Test Session Finished. ==========
