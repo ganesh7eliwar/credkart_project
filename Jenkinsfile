@@ -5,6 +5,10 @@ pipeline {
         VENV_DIR = '.venv'  // Local virtual environment directory
     }
 
+    parameters {
+        string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to use for tests')
+    }
+
     stages {
         stage('Checkout Source') {
             steps {
@@ -16,23 +20,25 @@ pipeline {
         stage('Setup Python Environment') {
             steps {
                 echo 'Setting up Python virtual environment...'
-                bat '''
-                    if not exist .venv (
-                        python -m venv .venv
+                bat """
+                    if not exist ${VENV_DIR} (
+                        python -m venv ${VENV_DIR}
                     )
-                    call .venv\\Scripts\\activate
+                    call ${VENV_DIR}\\Scripts\\activate
                     pip install --quiet --no-input --disable-pip-version-check --requirement requirements.txt
-                '''
+                """
             }
         }
 
         stage('Run CredKart Tests') {
             steps {
                 echo 'Running Selenium tests for CredKart...'
-                bat '''
-                    call .venv\\Scripts\\activate
-                    pytest -v -s testcases/ --browser chrome --alluredir=allure_reports
-                '''
+                retry(2) {
+                    bat """
+                        call ${VENV_DIR}\\Scripts\\activate
+                        pytest -v -s testcases/ --browser ${params.BROWSER} --alluredir=allure_reports
+                    """
+                }
             }
         }
     }
@@ -46,7 +52,7 @@ pipeline {
             allure([
                 includeProperties: false,
                 jdk: '',
-                results: [[path: 'allure_reports']]
+                results: [[path: "allure_reports"]]
             ])
         }
 
@@ -56,6 +62,11 @@ pipeline {
 
         failure {
             echo 'Test or setup failed. Check logs.'
+        }
+
+        cleanup {
+            echo 'Cleaning up workspace...'
+            deleteDir()
         }
     }
 }
