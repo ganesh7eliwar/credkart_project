@@ -211,8 +211,8 @@ __marimo__/
 
 # Local development files
 #  These files are used for local development and should not be committed to version control.
-*.html
-*.png
-*.txt
-*.json
-*.log
+# *.html
+# *.png
+# *.txt
+# *.json
+# *.log
