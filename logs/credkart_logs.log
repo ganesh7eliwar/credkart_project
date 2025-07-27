@@ -289,3 +289,161 @@
 2025-07-27 17:34:39,039 | INFO | TestAddItemToCart | test_add_item_to_cart | 46 | Clicked on Logout Button.
 2025-07-27 17:34:39,039 | INFO | TestAddItemToCart | test_add_item_to_cart | 47 | Test "Add Item To Cart" Passed.
 2025-07-27 17:34:39,039 | INFO | TestAddItemToCart | test_add_item_to_cart | 57 | ========== Test Session Finished. ==========
+2025-07-27 18:37:15,180 | INFO | TestAddItemToCart | test_add_item_to_cart | 16 | ********** Test Session Started. **********
+2025-07-27 18:37:15,180 | INFO | TestAddItemToCart | test_add_item_to_cart | 19 | Driver Setup Successful.
+2025-07-27 18:37:15,185 | INFO | TestAddItemToCart | test_add_item_to_cart | 20 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="8569dff05d7207541047560f911334cb")>
+2025-07-27 18:37:16,295 | INFO | TestAddItemToCart | test_add_item_to_cart | 22 | Clicked on Login Button Link and navigate to Login Page.
+2025-07-27 18:37:17,002 | INFO | TestAddItemToCart | test_add_item_to_cart | 24 | Entered Name in Name Text Box. --> david_shearing@yahoomail.com
+2025-07-27 18:37:17,313 | INFO | TestAddItemToCart | test_add_item_to_cart | 26 | Entered Password in Password Text Box. --> $lA6(3Bg1#vI!uzFE
+2025-07-27 18:37:19,327 | INFO | TestAddItemToCart | test_add_item_to_cart | 28 | Clicked on Login Button.
+2025-07-27 18:37:20,217 | INFO | TestAddItemToCart | test_add_item_to_cart | 32 | Item Selected.
+2025-07-27 18:37:21,303 | INFO | TestAddItemToCart | test_add_item_to_cart | 34 | Item Added To Cart.
+2025-07-27 18:37:21,851 | INFO | TestAddItemToCart | test_add_item_to_cart | 37 | Entered info If block.
+2025-07-27 18:37:21,851 | INFO | TestAddItemToCart | test_add_item_to_cart | 38 | Item Added Successfully.
+2025-07-27 18:37:22,460 | INFO | TestAddItemToCart | test_add_item_to_cart | 40 | Captured Screenshot.
+2025-07-27 18:37:23,358 | INFO | TestAddItemToCart | test_add_item_to_cart | 42 | Clicked on Continue Shopping Button.
+2025-07-27 18:37:23,962 | INFO | TestAddItemToCart | test_add_item_to_cart | 44 | Clicked on Logout Dropdown Button.
+2025-07-27 18:37:25,531 | INFO | TestAddItemToCart | test_add_item_to_cart | 46 | Clicked on Logout Button.
+2025-07-27 18:37:25,531 | INFO | TestAddItemToCart | test_add_item_to_cart | 47 | Test "Add Item To Cart" Passed.
+2025-07-27 18:37:25,532 | INFO | TestAddItemToCart | test_add_item_to_cart | 57 | ========== Test Session Finished. ==========
+2025-07-27 18:37:35,571 | INFO | TestLogin | test_login | 15 | ********** Test Session Started. **********
+2025-07-27 18:37:35,571 | INFO | TestLogin | test_login | 17 | Driver Setup Successful.
+2025-07-27 18:37:35,571 | INFO | TestLogin | test_login | 18 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="ae64f1da5d13af57b41ef577f5af8059")>
+2025-07-27 18:37:36,647 | INFO | TestLogin | test_login | 21 | Clicked on Login Button Link and navigate to Login Page.
+2025-07-27 18:37:37,078 | INFO | TestLogin | test_login | 23 | Entered Name in Name Text Box. --> david_shearing@yahoomail.com
+2025-07-27 18:37:37,368 | INFO | TestLogin | test_login | 25 | Entered Password in Name Text Box. --> $lA6(3Bg1#vI!uzFE
+2025-07-27 18:37:39,880 | INFO | TestLogin | test_login | 27 | Clicked on Login Button.
+2025-07-27 18:37:39,977 | INFO | TestLogin | test_login | 30 | Entered info If block.
+2025-07-27 18:37:39,977 | INFO | TestLogin | test_login | 31 | User Login Successful.
+2025-07-27 18:37:39,977 | INFO | TestLogin | test_login | 32 | Test Login Passed.
+2025-07-27 18:37:40,345 | INFO | TestLogin | test_login | 34 | Captured Screenshot.
+2025-07-27 18:37:40,676 | INFO | TestLogin | test_login | 37 | Clicked on Logout Button
+2025-07-27 18:37:40,676 | INFO | TestLogin | test_login | 47 | ========== Test Session Finished. ==========
+2025-07-27 18:37:49,054 | INFO | TestLoginDDT | test_login_ddt | 15 | ********** Test Session Started. **********
+2025-07-27 18:37:49,059 | INFO | TestLoginDDT | test_login_ddt | 17 | Driver Setup Successful.
+2025-07-27 18:37:49,059 | INFO | TestLoginDDT | test_login_ddt | 18 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="c47f732429c12660c07c67bcfef124c0")>
+2025-07-27 18:37:49,257 | INFO | TestLoginDDT | test_login_ddt | 20 | Number of Rows in Table: 5 including Header.
+2025-07-27 18:37:49,257 | INFO | TestLoginDDT | test_login_ddt | 28 | Entered into for loop, Interation No.: 1.
+2025-07-27 18:37:51,576 | INFO | TestLoginDDT | test_login_ddt | 34 | Clicked on Login Button.
+2025-07-27 18:37:52,242 | INFO | TestLoginDDT | test_login_ddt | 36 | Entered Email Address: david_shearing@yahoomail.com.
+2025-07-27 18:37:52,902 | INFO | TestLoginDDT | test_login_ddt | 38 | Entered Password: $lA6(3Bg1#vI!uzFE.
+2025-07-27 18:37:55,117 | INFO | TestLoginDDT | test_login_ddt | 40 | Clicked on Login Button.
+2025-07-27 18:37:55,117 | INFO | TestLoginDDT | test_login_ddt | 43 | Entered into If Block.
+2025-07-27 18:37:55,202 | INFO | TestLoginDDT | test_login_ddt | 45 | Entered into Nested If Block within If Block.
+2025-07-27 18:37:55,202 | INFO | TestLoginDDT | test_login_ddt | 47 | Appended data to Status List.
+2025-07-27 18:37:55,428 | INFO | TestLoginDDT | test_login_ddt | 49 | Clicked on Logout DropDown Button.
+2025-07-27 18:37:56,957 | INFO | TestLoginDDT | test_login_ddt | 51 | Clicked on Logout Button.
+2025-07-27 18:37:56,957 | INFO | TestLoginDDT | test_login_ddt | 28 | Entered into for loop, Interation No.: 2.
+2025-07-27 18:37:57,588 | INFO | TestLoginDDT | test_login_ddt | 34 | Clicked on Login Button.
+2025-07-27 18:37:57,771 | INFO | TestLoginDDT | test_login_ddt | 36 | Entered Email Address: david_shearing@yahoomail.com.
+2025-07-27 18:37:57,915 | INFO | TestLoginDDT | test_login_ddt | 38 | Entered Password: $lA6(3g1#vI!uzFE.
+2025-07-27 18:37:58,867 | INFO | TestLoginDDT | test_login_ddt | 40 | Clicked on Login Button.
+2025-07-27 18:37:58,867 | INFO | TestLoginDDT | test_login_ddt | 59 | Entered into Elif Block.
+2025-07-27 18:38:08,931 | INFO | TestLoginDDT | test_login_ddt | 70 | Entered into Else Block.
+2025-07-27 18:38:08,931 | INFO | TestLoginDDT | test_login_ddt | 72 | Appended Data to Status List.
+2025-07-27 18:38:08,931 | INFO | TestLoginDDT | test_login_ddt | 28 | Entered into for loop, Interation No.: 3.
+2025-07-27 18:38:09,577 | INFO | TestLoginDDT | test_login_ddt | 34 | Clicked on Login Button.
+2025-07-27 18:38:10,069 | INFO | TestLoginDDT | test_login_ddt | 36 | Entered Email Address: david_shearing@gmail.com.
+2025-07-27 18:38:10,355 | INFO | TestLoginDDT | test_login_ddt | 38 | Entered Password: $lA6(3Bg1#vI!uzFE.
+2025-07-27 18:38:11,910 | INFO | TestLoginDDT | test_login_ddt | 40 | Clicked on Login Button.
+2025-07-27 18:38:11,910 | INFO | TestLoginDDT | test_login_ddt | 59 | Entered into Elif Block.
+2025-07-27 18:38:21,964 | INFO | TestLoginDDT | test_login_ddt | 70 | Entered into Else Block.
+2025-07-27 18:38:21,964 | INFO | TestLoginDDT | test_login_ddt | 72 | Appended Data to Status List.
+2025-07-27 18:38:21,964 | INFO | TestLoginDDT | test_login_ddt | 28 | Entered into for loop, Interation No.: 4.
+2025-07-27 18:38:22,532 | INFO | TestLoginDDT | test_login_ddt | 34 | Clicked on Login Button.
+2025-07-27 18:38:22,726 | INFO | TestLoginDDT | test_login_ddt | 36 | Entered Email Address: david_shearing@credence.in.
+2025-07-27 18:38:22,896 | INFO | TestLoginDDT | test_login_ddt | 38 | Entered Password: $lA6(3g1#vI!uzFE.
+2025-07-27 18:38:23,784 | INFO | TestLoginDDT | test_login_ddt | 40 | Clicked on Login Button.
+2025-07-27 18:38:23,784 | INFO | TestLoginDDT | test_login_ddt | 59 | Entered into Elif Block.
+2025-07-27 18:38:33,858 | INFO | TestLoginDDT | test_login_ddt | 70 | Entered into Else Block.
+2025-07-27 18:38:33,858 | INFO | TestLoginDDT | test_login_ddt | 72 | Appended Data to Status List.
+2025-07-27 18:38:33,858 | INFO | TestLoginDDT | test_login_ddt | 75 | Entered into If Block for Assertion.
+2025-07-27 18:38:33,858 | INFO | TestLoginDDT | test_login_ddt | 76 | If Fail not in Status List Testcase Passed.
+2025-07-27 18:38:33,859 | INFO | TestLoginDDT | test_login_ddt | 77 | Status List: ['Pass', 'Pass', 'Pass', 'Pass']
+2025-07-27 18:38:33,859 | INFO | TestLoginDDT | test_login_ddt | 78 | Test "Test_Login_DDT" Passed.
+2025-07-27 18:38:33,861 | INFO | TestLoginDDT | test_login_ddt | 87 | ========== Test Session Finished. ==========
+2025-07-27 18:38:40,317 | INFO | TestLoginParam | test_login_param | 12 | ********** Test Session Started. **********
+2025-07-27 18:38:40,318 | INFO | TestLoginParam | test_login_param | 14 | Driver Setup Successful.
+2025-07-27 18:38:40,318 | INFO | TestLoginParam | test_login_param | 15 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="8d99fa6b3592d309e31f2ec731579f40")>
+2025-07-27 18:38:42,064 | INFO | TestLoginParam | test_login_param | 20 | Clicked on login button.
+2025-07-27 18:38:42,346 | INFO | TestLoginParam | test_login_param | 22 | Inserted data into Email textbox. --> david_shearing@yahoomail.com
+2025-07-27 18:38:42,562 | INFO | TestLoginParam | test_login_param | 24 | Inserted data into first name textbox. --> $lA6(3Bg1#vI!uzFE
+2025-07-27 18:38:44,293 | INFO | TestLoginParam | test_login_param | 26 | Clicked on login button.
+2025-07-27 18:38:44,293 | INFO | TestLoginParam | test_login_param | 29 | Entered into if Block
+2025-07-27 18:38:44,408 | INFO | TestLoginParam | test_login_param | 31 | Entered into Nested if Block
+2025-07-27 18:38:44,408 | INFO | TestLoginParam | test_login_param | 33 | Appended data to Status List.
+2025-07-27 18:38:44,591 | INFO | TestLoginParam | test_login_param | 35 | Clicked on log out dropdown button.
+2025-07-27 18:38:45,873 | INFO | TestLoginParam | test_login_param | 37 | Clicked on log out button
+2025-07-27 18:38:45,873 | INFO | TestLoginParam | test_login_param | 59 | Entered into If Block for Assertion.
+2025-07-27 18:38:45,874 | INFO | TestLoginParam | test_login_param | 60 | If Fail not in Status List Testcase Passed.
+2025-07-27 18:38:45,874 | INFO | TestLoginParam | test_login_param | 61 | Status List: ['Pass']
+2025-07-27 18:38:45,875 | INFO | TestLoginParam | test_login_param | 62 | Test "Test_Login_DDT" Passed.
+2025-07-27 18:38:45,875 | INFO | TestLoginParam | test_login_param | 71 | ========== Test Session Finished. ==========
+2025-07-27 18:38:54,511 | INFO | TestLoginParam | test_login_param | 12 | ********** Test Session Started. **********
+2025-07-27 18:38:54,511 | INFO | TestLoginParam | test_login_param | 14 | Driver Setup Successful.
+2025-07-27 18:38:54,511 | INFO | TestLoginParam | test_login_param | 15 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="ee346fbd8deadb88edc6376b956bdde8")>
+2025-07-27 18:38:55,762 | INFO | TestLoginParam | test_login_param | 20 | Clicked on login button.
+2025-07-27 18:38:56,745 | INFO | TestLoginParam | test_login_param | 22 | Inserted data into Email textbox. --> david_shearing@yahoomail.com
+2025-07-27 18:38:56,948 | INFO | TestLoginParam | test_login_param | 24 | Inserted data into first name textbox. --> $lA6(3g1#vI!uzFE
+2025-07-27 18:38:58,111 | INFO | TestLoginParam | test_login_param | 26 | Clicked on login button.
+2025-07-27 18:38:58,111 | INFO | TestLoginParam | test_login_param | 44 | Entered into Elif Block.
+2025-07-27 18:39:08,198 | INFO | TestLoginParam | test_login_param | 54 | Entered into Else Block.
+2025-07-27 18:39:08,199 | INFO | TestLoginParam | test_login_param | 56 | Appended Data to Status List.
+2025-07-27 18:39:08,199 | INFO | TestLoginParam | test_login_param | 59 | Entered into If Block for Assertion.
+2025-07-27 18:39:08,200 | INFO | TestLoginParam | test_login_param | 60 | If Fail not in Status List Testcase Passed.
+2025-07-27 18:39:08,200 | INFO | TestLoginParam | test_login_param | 61 | Status List: ['Pass']
+2025-07-27 18:39:08,200 | INFO | TestLoginParam | test_login_param | 62 | Test "Test_Login_DDT" Passed.
+2025-07-27 18:39:08,201 | INFO | TestLoginParam | test_login_param | 71 | ========== Test Session Finished. ==========
+2025-07-27 18:39:28,316 | INFO | TestLoginParam | test_login_param | 12 | ********** Test Session Started. **********
+2025-07-27 18:39:28,323 | INFO | TestLoginParam | test_login_param | 14 | Driver Setup Successful.
+2025-07-27 18:39:28,324 | INFO | TestLoginParam | test_login_param | 15 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="ee72114c9d2c52a836e672c5562af8c7")>
+2025-07-27 18:39:29,862 | INFO | TestLoginParam | test_login_param | 20 | Clicked on login button.
+2025-07-27 18:39:30,433 | INFO | TestLoginParam | test_login_param | 22 | Inserted data into Email textbox. --> david_shearing@gmail.com
+2025-07-27 18:39:30,768 | INFO | TestLoginParam | test_login_param | 24 | Inserted data into first name textbox. --> $lA6(3Bg1#vI!uzFE
+2025-07-27 18:39:31,857 | INFO | TestLoginParam | test_login_param | 26 | Clicked on login button.
+2025-07-27 18:39:31,878 | INFO | TestLoginParam | test_login_param | 44 | Entered into Elif Block.
+2025-07-27 18:39:41,903 | INFO | TestLoginParam | test_login_param | 54 | Entered into Else Block.
+2025-07-27 18:39:41,903 | INFO | TestLoginParam | test_login_param | 56 | Appended Data to Status List.
+2025-07-27 18:39:41,903 | INFO | TestLoginParam | test_login_param | 59 | Entered into If Block for Assertion.
+2025-07-27 18:39:41,903 | INFO | TestLoginParam | test_login_param | 60 | If Fail not in Status List Testcase Passed.
+2025-07-27 18:39:41,903 | INFO | TestLoginParam | test_login_param | 61 | Status List: ['Pass']
+2025-07-27 18:39:41,903 | INFO | TestLoginParam | test_login_param | 62 | Test "Test_Login_DDT" Passed.
+2025-07-27 18:39:41,903 | INFO | TestLoginParam | test_login_param | 71 | ========== Test Session Finished. ==========
+2025-07-27 18:39:48,908 | INFO | TestLoginParam | test_login_param | 12 | ********** Test Session Started. **********
+2025-07-27 18:39:48,909 | INFO | TestLoginParam | test_login_param | 14 | Driver Setup Successful.
+2025-07-27 18:39:48,910 | INFO | TestLoginParam | test_login_param | 15 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="39ad1507793d8bfd15897986f2322c78")>
+2025-07-27 18:39:50,889 | INFO | TestLoginParam | test_login_param | 20 | Clicked on login button.
+2025-07-27 18:39:51,495 | INFO | TestLoginParam | test_login_param | 22 | Inserted data into Email textbox. --> david_shearing@credence.in
+2025-07-27 18:39:51,641 | INFO | TestLoginParam | test_login_param | 24 | Inserted data into first name textbox. --> $lA6(3g1#vI!uzFE
+2025-07-27 18:39:52,594 | INFO | TestLoginParam | test_login_param | 26 | Clicked on login button.
+2025-07-27 18:39:52,603 | INFO | TestLoginParam | test_login_param | 44 | Entered into Elif Block.
+2025-07-27 18:40:02,882 | INFO | TestLoginParam | test_login_param | 54 | Entered into Else Block.
+2025-07-27 18:40:02,882 | INFO | TestLoginParam | test_login_param | 56 | Appended Data to Status List.
+2025-07-27 18:40:02,882 | INFO | TestLoginParam | test_login_param | 59 | Entered into If Block for Assertion.
+2025-07-27 18:40:02,882 | INFO | TestLoginParam | test_login_param | 60 | If Fail not in Status List Testcase Passed.
+2025-07-27 18:40:02,882 | INFO | TestLoginParam | test_login_param | 61 | Status List: ['Pass']
+2025-07-27 18:40:02,882 | INFO | TestLoginParam | test_login_param | 62 | Test "Test_Login_DDT" Passed.
+2025-07-27 18:40:02,882 | INFO | TestLoginParam | test_login_param | 71 | ========== Test Session Finished. ==========
+2025-07-27 18:40:10,686 | INFO | TestRegister | test_register | 14 | ********** Test Session Started. **********
+2025-07-27 18:40:10,688 | INFO | TestRegister | test_register | 16 | Driver Setup Successful.
+2025-07-27 18:40:10,690 | INFO | TestRegister | test_register | 18 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="f64004c27c5eae1762a10ed20adb5e65")>
+2025-07-27 18:40:12,250 | INFO | TestRegister | test_register | 20 | Clicked on Register Button Link and navigate to Register Page.
+2025-07-27 18:40:12,621 | INFO | TestRegister | test_register | 22 | Entered Name in Name Text Box. --> James Burbach
+2025-07-27 18:40:12,936 | INFO | TestRegister | test_register | 24 | Entered Email in Email Text Box. --> james_burbach@credence.in
+2025-07-27 18:40:13,154 | INFO | TestRegister | test_register | 26 | Entered Password in Password Text Box. --> Y$0EkXYvxr68H!$
+2025-07-27 18:40:13,565 | INFO | TestRegister | test_register | 28 | Entered Password in Confirm Password Text Box. Y$0EkXYvxr68H!$
+2025-07-27 18:40:16,280 | INFO | TestRegister | test_register | 30 | Clicked on Register Button.
+2025-07-27 18:40:16,595 | INFO | TestRegister | test_register | 33 | Entered info If block.
+2025-07-27 18:40:16,630 | INFO | TestRegister | test_register | 34 | James Burbach == James Burbach
+2025-07-27 18:40:16,630 | INFO | TestRegister | test_register | 35 | User Registration Successful.
+2025-07-27 18:40:16,631 | INFO | TestRegister | test_register | 36 | Test Register Passed.
+2025-07-27 18:40:16,944 | INFO | TestRegister | test_register | 38 | Captured Screenshot.
+2025-07-27 18:40:16,946 | INFO | TestRegister | test_register | 48 | ========== Test Session Finished. ==========
+2025-07-27 18:40:23,733 | INFO | TestURLCheck | test_url_check | 12 | ********** Test Session Started. **********
+2025-07-27 18:40:23,736 | INFO | TestURLCheck | test_url_check | 14 | Driver Setup Successful.
+2025-07-27 18:40:23,737 | INFO | TestURLCheck | test_url_check | 15 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="0a0780cc54a70ddea45ed1e876a6711f")>
+2025-07-27 18:40:24,559 | INFO | TestURLCheck | test_url_check | 19 | Entered into If Block.
+2025-07-27 18:40:24,568 | INFO | TestURLCheck | test_url_check | 20 | Title of the Page is: CredKart
+2025-07-27 18:40:24,569 | INFO | TestURLCheck | test_url_check | 21 | Test URL Check Passed
+2025-07-27 18:40:24,868 | INFO | TestURLCheck | test_url_check | 23 | Screenshot Captured.
+2025-07-27 18:40:24,868 | INFO | TestURLCheck | test_url_check | 32 | ========== Test Session Finished. ==========
