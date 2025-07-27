@@ -9,7 +9,7 @@ class Loggen:
     def log_generator():
         log_name = inspect.stack()[1][3]
         logger = logging.getLogger(log_name)
-        log_file = logging.FileHandler(f'./Logs/credkart_logs.log')
+        log_file = logging.FileHandler(f'./logs/credkart_logs.log')
         log_format = logging.Formatter(
             "%(asctime)s | %(levelname)s | %(name)s | %(funcName)s | %(lineno)s | %(message)s")
         log_file.setFormatter(log_format)
