@@ -31,3 +31,10 @@ class RCLoginPage:
     def name():
         user_name = config.get('Login Page', 'name')
         return user_name
+
+
+class RCAddItem:
+    @staticmethod
+    def confirmation_text():
+        cnf_text = config.get('Add Item', 'confirmation_text')
+        return cnf_text

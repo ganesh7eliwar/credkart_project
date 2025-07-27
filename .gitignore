@@ -215,5 +215,4 @@ __marimo__/
 *.png
 *.txt
 *.json
-*.log
 logs/
