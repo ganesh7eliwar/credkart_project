@@ -2,6 +2,7 @@ from page_objects.login_page import LoginPage
 from utilities import excelutils
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage
+import allure
 
 
 class TestLoginDDT:
@@ -10,6 +11,15 @@ class TestLoginDDT:
     log = Loggen.log_generator()
     user_name = RCLoginPage.name()
 
+    @allure.epic('Credkart Project')
+    @allure.feature('Data Driven Test')
+    @allure.story('Verify Login with Data')
+    @allure.label('owner', 'ganesh_sateliwar')
+    @allure.severity(allure.severity_level.NORMAL)
+    # @allure.tag('smoke', 'login')
+    @allure.link('https://automation.credence.in/shop', 'Login')
+    @allure.title('Credkart')
+    @allure.description('This is a Data Driven test which gives different Inputs while Login.')
     def test_login_ddt(self, setup):
 
         self.log.info('********** Test Session Started. **********')

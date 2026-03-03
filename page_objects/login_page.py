@@ -1,8 +1,10 @@
+from allure_commons.types import AttachmentType
 from selenium.common import TimeoutException, NoSuchElementException, ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 # from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 from datetime import datetime
+import allure
 
 now = datetime.now().strftime('%d%m%Y%H%M%S')
 
@@ -64,8 +66,16 @@ class LoginPage:
         except (TimeoutException, NoSuchElementException, ElementClickInterceptedException):
             return "Encountered an Error."
 
-    def ss_on_pass(self):
+    def screenshot_on_pass(self):
         self.driver.save_screenshot(f'./screenshots/Test_Login_Pass_{now}.png')
 
-    def ss_on_fail(self):
+    def screenshot_on_fail(self):
         self.driver.save_screenshot(f'./screenshots/Test_Login_Fail_{now}.png')
+
+    def allure_pass(self):
+        allure.attach(self.driver.get_screenshot_as_png(), name=f'Test_Login_Pass_{now}',
+                      attachment_type=AttachmentType.PNG)
+
+    def allure_fail(self):
+        allure.attach(self.driver.get_screenshot_as_png(), name=f'Test_Login_Fail_{now}',
+                      attachment_type=AttachmentType.PNG)

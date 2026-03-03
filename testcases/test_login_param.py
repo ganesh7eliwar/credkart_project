@@ -1,12 +1,22 @@
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage
+import allure
 
 
 class TestLoginParam:
     user_name = RCLoginPage.name()
     log = Loggen.log_generator()
 
+    @allure.epic('Credkart Project')
+    @allure.feature('Parameterized Test')
+    @allure.story('Verify Login with Data')
+    @allure.label('owner', 'ganesh_sateliwar')
+    @allure.severity(allure.severity_level.NORMAL)
+    # @allure.tag('smoke', 'login')
+    @allure.link('https://automation.credence.in/shop', 'Login')
+    @allure.title('Credkart')
+    @allure.description('This is a Parameterized test which gives different Inputs while Login.')
     def test_login_param(self, setup, data_for_login):
 
         self.log.info('********** Test Session Started. **********')

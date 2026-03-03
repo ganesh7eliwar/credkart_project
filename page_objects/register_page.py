@@ -1,5 +1,7 @@
+from allure_commons.types import AttachmentType
 from selenium.webdriver.common.by import By
 from datetime import datetime
+import allure
 
 now = datetime.now().strftime('%d%m%Y%H%M%S')
 
@@ -45,9 +47,17 @@ class RegisterPage:
         user = self.driver.find_element(By.XPATH, self.user_name_xpath).text
         return user
 
-    def successful_register_ss(self):
+    def screenshot_on_pass(self):
         successful_reg_ss = self.driver.find_element(By.ID, self.navbar_id)
         successful_reg_ss.screenshot(f'./screenshots/Test_Register_Pass_{now}.png')
 
-    def ss_on_fail(self):
+    def screenshot_on_fail(self):
         self.driver.save_screenshot(f'./screenshots/Test_Register_Fail_{now}.png')
+
+    def allure_pass(self):
+        allure.attach(self.driver.get_screenshot_as_png(), name=f'Test_Register_Pass_{now}',
+                      attachment_type=AttachmentType.PNG)
+
+    def allure_fail(self):
+        allure.attach(self.driver.get_screenshot_as_png(), name=f'Test_Register_Fail_{now}',
+                      attachment_type=AttachmentType.PNG)

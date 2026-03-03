@@ -1,6 +1,7 @@
 from page_objects.register_page import RegisterPage
 from utilities.generator import Generator
 from utilities.logger import Loggen
+import allure
 
 
 class TestRegister:
@@ -9,6 +10,15 @@ class TestRegister:
     email = Generator.generate_email()
     password = Generator.password()
 
+    @allure.epic('Credkart Project')
+    @allure.feature('Registration')
+    @allure.story('Registering a user for the first time.')
+    @allure.label('owner', 'ganesh_sateliwar')
+    @allure.severity(allure.severity_level.CRITICAL)
+    # @allure.tag('sanity', 'regression')
+    @allure.link('https://automation.credence.in/shop', 'Registration')
+    @allure.title('Credkart')
+    @allure.description('This is a registration test.')
     def test_register(self, setup):
 
         self.log.info('********** Test Session Started. **********')
@@ -34,15 +44,17 @@ class TestRegister:
             self.log.info(f'{self.rp.user_name()} == {self.name}')
             self.log.info('User Registration Successful.')
             self.log.info('Test Register Passed.')
-            self.rp.successful_register_ss()
+            self.rp.screenshot_on_pass()
             self.log.info('Captured Screenshot.')
+            self.rp.allure_pass()
             assert True
         else:
             self.log.info('Entered into Else Block.')
             self.log.info('User Registration Unsuccessful.')
             self.log.info('Test Register Failed.')
-            self.rp.ss_on_fail()
+            self.rp.screenshot_on_fail()
             self.log.info('Captured Screenshot.')
+            self.rp.allure_fail()
             assert False
 
         self.log.info('========== Test Session Finished. ==========')

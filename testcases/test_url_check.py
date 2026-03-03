@@ -1,12 +1,22 @@
 from page_objects.url_check import URLCheck
 from utilities.logger import Loggen
 from utilities.read_config import ReadConfigPD
+import allure
 
 
 class TestURLCheck:
     title = ReadConfigPD.page_title()
     log = Loggen.log_generator()
 
+    @allure.epic('Credkart Project')
+    @allure.feature('Url')
+    @allure.story('Verify Url')
+    @allure.label('owner', 'ganesh_sateliwar')
+    @allure.severity(allure.severity_level.CRITICAL)
+    # @allure.tag('smoke', 'regression')
+    @allure.link('https://automation.credence.in/shop', 'URL')
+    @allure.title('Credkart')
+    @allure.description('This is to check whether the Url is working Properly or not.')
     def test_url_check(self, setup):
 
         self.log.info('********** Test Session Started. **********')
@@ -25,8 +35,9 @@ class TestURLCheck:
         else:
             self.log.info('Entered into Else Block.')
             self.log.info('Test URL Check Failed.')
-            self.uc.ss_on_fail()
+            self.uc.screenshot_on_fail()
             self.log.info('Screenshot Captured.')
+            self.uc.allure_fail()
             assert False
 
         self.log.info('========== Test Session Finished. ==========')

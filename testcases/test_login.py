@@ -1,6 +1,7 @@
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage, ReadConfigPD
+import allure
 
 
 class TestLogin:
@@ -10,6 +11,15 @@ class TestLogin:
     name = RCLoginPage.name()
     title = ReadConfigPD.page_title()
 
+    @allure.epic('Credkart Project')
+    @allure.feature('Login')
+    @allure.story('Login with valid credentials')
+    @allure.label('owner', 'ganesh_sateliwar')
+    @allure.severity(allure.severity_level.NORMAL)
+    # @allure.tag('smoke')
+    @allure.link('https://automation.credence.in/shop', 'Login')
+    @allure.title('CredKart')
+    @allure.description('This is login test with valid credentials.')
     def test_login(self, setup):
 
         self.log.info('********** Test Session Started. **********')
@@ -30,8 +40,9 @@ class TestLogin:
             self.log.info('Entered info If block.')
             self.log.info('User Login Successful.')
             self.log.info('Test Login Passed.')
-            self.lp.ss_on_pass()
+            self.lp.screenshot_on_pass()
             self.log.info('Captured Screenshot.')
+            self.lp.allure_pass()
             self.lp.logout_dd_button()
             self.lp.logout_button()
             self.log.info('Clicked on Logout Button')
@@ -40,8 +51,9 @@ class TestLogin:
             self.log.info('Entered into Else Block.')
             self.log.info('User Login Unsuccessful.')
             self.log.info('Test Login Failed.')
-            self.lp.ss_on_fail()
+            self.lp.screenshot_on_fail()
             self.log.info('Captured Screenshot.')
+            self.lp.allure_fail()
             assert False
 
         self.log.info('========== Test Session Finished. ==========')
