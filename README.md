@@ -1,7 +1,3 @@
-Certainly! Here is a **detailed project description** for the `credkart_project` that you can use in your repository’s “About” or “Description” section, in documentation, or wherever you wish:
-
----
-
 ## CredKart Project - Automated E-commerce Testing Framework
 
 The **CredKart Project** is a robust, scalable, and extensible automated testing framework specifically designed for the CredKart e-commerce web application. This project utilizes the powerful combination of Python (53.9%), HTML (41.2%), and CSS (4.9%) to deliver end-to-end quality assurance through automation.
