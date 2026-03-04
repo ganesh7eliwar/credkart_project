@@ -54,3 +54,91 @@ The test suite covers critical user workflows including user authentication, reg
 ---
 
 ## 📂 Project Structure
+
+---
+
+## 📋 Test Case Documentation
+
+### 1. **test_url_check.py** - URL Validation
+- **Purpose**: Verify that the application URL loads correctly and page title matches
+- **Severity**: CRITICAL
+- **Type**: Smoke Test
+- **Expected Result**: Page title should match configured title
+
+### 2. **test_login.py** - Basic Login
+- **Purpose**: Test login functionality with valid credentials
+- **Severity**: NORMAL
+- **Type**: Functional Test
+- **Precondition**: Valid credentials must be configured
+- **Expected Result**: User successfully logs in and dashboard displays
+
+### 3. **test_login_param.py** - Parameterized Login
+- **Purpose**: Test login with multiple parameter sets (Pass/Fail scenarios)
+- **Severity**: NORMAL
+- **Type**: Parameterized Test
+- **Scenarios**: Valid credentials (Pass), Invalid credentials (Fail)
+- **Expected Result**: Appropriate success/failure behavior for each scenario
+
+### 4. **test_login_ddt.py** - Data-Driven Login
+- **Purpose**: Test login with multiple data sets from Excel file
+- **Severity**: NORMAL
+- **Type**: Data-Driven Test
+- **Data Source**: `test_data/Credkart_Login_Data.xlsx`
+- **Expected Result**: Login succeeds/fails based on Excel data
+
+### 5. **test_register.py** - User Registration
+- **Purpose**: Test new user registration with auto-generated data
+- **Severity**: CRITICAL
+- **Type**: Sanity Test
+- **Data**: Auto-generated email, name, password
+- **Expected Result**: New user registered successfully
+
+### 6. **test_add_item.py** - Add to Cart
+- **Purpose**: Test adding items to shopping cart
+- **Severity**: NORMAL
+- **Type**: Functional Test
+- **Flow**: Login → Select Item → Add to Cart → Verify confirmation
+- **Expected Result**: Item successfully added to cart with confirmation message
+
+### 7. **test_add_item_to_wishlist.py** - Add to Wishlist
+- **Purpose**: Test adding items to wishlist
+- **Severity**: NORMAL
+- **Type**: Functional Test
+- **Flow**: Login → Select Item → Add to Wishlist → Verify confirmation
+- **Expected Result**: Item successfully added to wishlist
+
+### 8. **test_empty_cart.py** - Remove from Cart
+- **Purpose**: Test removing items from shopping cart
+- **Severity**: NORMAL
+- **Type**: Functional Test
+- **Flow**: Login → Add Item → Empty Cart → Verify empty state
+- **Expected Result**: Cart successfully emptied with confirmation
+
+### 9. **test_empty_wishlist.py** - Remove from Wishlist
+- **Purpose**: Test removing items from wishlist
+- **Severity**: NORMAL
+- **Type**: Functional Test
+- **Flow**: Login → Add to Wishlist → Remove → Verify empty state
+- **Expected Result**: Wishlist successfully cleared
+
+### 10. **test_end_to_end.py** - Complete Checkout
+- **Purpose**: Test complete purchase workflow from login to order placement
+- **Severity**: NORMAL
+- **Type**: End-to-End Test
+- **Flow**: Login → Add Multiple Items → Checkout → Payment → Order Confirmation
+- **Expected Result**: Order successfully placed with confirmation message
+
+---
+
+## 🔧 Installation & Setup
+
+### Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
+- Chrome/Firefox browser installed
+- Git
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/ganesh7eliwar/credkart_project.git
+cd credkart_project
