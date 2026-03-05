@@ -57,7 +57,7 @@ pipeline {
         }
 
         success {
-            echo 'All tests passed!'
+            echo 'All Tests Passed!'
         }
 
         failure {
