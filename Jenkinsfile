@@ -36,7 +36,7 @@ pipeline {
                 retry(2) {
                     bat """
                         call ${VENV_DIR}\\Scripts\\activate
-                        pytest -v -s testcases/ --browser ${params.BROWSER} --alluredir=allure_reports
+                        pytest -v -s testcases/ --browser ${params.BROWSER} --alluredir=allure_reports -n 4
                     """
                 }
             }
