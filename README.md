@@ -72,7 +72,7 @@ The **CredKart Project** is a robust, scalable, and extensible automated testing
 
 - [Project Repository](https://github.com/ganesh7eliwar/credkart_project)
 - [Live Application](https://automation.credence.in/shop)
-- Owner: [Ganesh Sateliwar](https://github.com/ganesh7eliwar)
+- Owner: [Ganesh Sateliwar]
 
 ---
 
