@@ -1,9 +1,11 @@
+from pytest_dependency import depends
+
 from page_objects.add_item_to_cart import AddItemInCart
 from page_objects.empty_cart_wishlist import EmptyCartOrWishlist
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage, RCEmptyCartWishlist
-import allure
+import allure, pytest
 
 
 class TestEmptyCart:
@@ -21,6 +23,7 @@ class TestEmptyCart:
     @allure.link('https://automation.credence.in/shop', 'Cart')
     @allure.title('CredKart')
     @allure.description('This Test Case removes the Items from the Cart.')
+    @pytest.mark.order(5)
     def test_empty_cart(self, setup):
 
         self.log.info('********** Test Session Started. **********')

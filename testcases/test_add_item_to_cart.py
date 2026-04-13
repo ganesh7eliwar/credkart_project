@@ -2,7 +2,7 @@ from page_objects.add_item_to_cart import AddItemInCart
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage, RCAddItem
-import allure
+import allure, pytest
 
 
 class TestAddItemToCart:
@@ -21,6 +21,7 @@ class TestAddItemToCart:
     @allure.link('https://automation.credence.in/shop', 'Cart')
     @allure.title('CredKart')
     @allure.description('This Test Case adds new Item into the Cart.')
+    @pytest.mark.order(4)
     def test_add_item_to_cart(self, setup):
 
         self.log.info('********** Test Session Started. **********')

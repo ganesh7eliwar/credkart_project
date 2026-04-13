@@ -1,7 +1,7 @@
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage
-import allure
+import allure, pytest
 
 
 class TestLoginParam:
@@ -17,6 +17,7 @@ class TestLoginParam:
     @allure.link('https://automation.credence.in/shop', 'Login')
     @allure.title('Credkart')
     @allure.description('This is a Parameterized test which gives different Inputs while Login.')
+    @pytest.mark.order(8)
     def test_login_param(self, setup, data_for_login):
 
         self.log.info('********** Test Session Started. **********')

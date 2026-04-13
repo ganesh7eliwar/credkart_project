@@ -3,8 +3,8 @@ from page_objects.checkout import Checkout
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage, RCBillingShippingAddress, RCPayment, RCCardNumber, RCOrderPlaced
-import random
-import allure
+import allure, pytest, random
+
 
 class TestEndToEnd:
     log = Loggen.log_generator()
@@ -29,6 +29,7 @@ class TestEndToEnd:
     @allure.link('https://automation.credence.in/shop', 'End to End')
     @allure.title('CredKart')
     @allure.description('This Test case is End to End Testcase that includes login into the WebSite and Checkout.')
+    @pytest.mark.order(10)
     def test_end_to_end(self, setup):
         self.log.info('********** Test Session Started. **********')
         self.driver = setup

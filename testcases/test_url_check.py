@@ -1,7 +1,7 @@
 from page_objects.url_check import URLCheck
 from utilities.logger import Loggen
 from utilities.read_config import ReadConfigPD
-import allure
+import allure, pytest
 
 
 class TestURLCheck:
@@ -17,6 +17,7 @@ class TestURLCheck:
     @allure.link('https://automation.credence.in/shop', 'URL')
     @allure.title('Credkart')
     @allure.description('This is to check whether the Url is working Properly or not.')
+    @pytest.mark.order(1)
     def test_url_check(self, setup):
 
         self.log.info('********** Test Session Started. **********')

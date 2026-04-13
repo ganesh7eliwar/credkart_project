@@ -1,7 +1,7 @@
 from page_objects.register_page import RegisterPage
 from utilities.generator import Generator
 from utilities.logger import Loggen
-import allure
+import allure, pytest
 
 
 class TestRegister:
@@ -19,6 +19,7 @@ class TestRegister:
     @allure.link('https://automation.credence.in/shop', 'Registration')
     @allure.title('Credkart')
     @allure.description('This is a registration test.')
+    @pytest.mark.order(2)
     def test_register(self, setup):
 
         self.log.info('********** Test Session Started. **********')

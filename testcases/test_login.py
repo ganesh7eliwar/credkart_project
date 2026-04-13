@@ -1,7 +1,7 @@
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
 from utilities.read_config import RCLoginPage, ReadConfigPD
-import allure
+import allure, pytest
 
 
 class TestLogin:
@@ -20,6 +20,7 @@ class TestLogin:
     @allure.link('https://automation.credence.in/shop', 'Login')
     @allure.title('CredKart')
     @allure.description('This is login test with valid credentials.')
+    @pytest.mark.order(3)
     def test_login(self, setup):
 
         self.log.info('********** Test Session Started. **********')
