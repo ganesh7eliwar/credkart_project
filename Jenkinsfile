@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        VENV_DIR = '.venv'  // Local virtual environment directory
+        VENV_DIR = '.venv'
+        PYTHON = "${VENV_DIR}\\Scripts\\python.exe"
     }
 
     parameters {
@@ -10,6 +11,7 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout Source') {
             steps {
                 echo 'Checking out source code...'
@@ -19,13 +21,14 @@ pipeline {
 
         stage('Setup Python Environment') {
             steps {
-                echo 'Setting up Python virtual environment...'
+                echo 'Creating virtual environment & installing dependencies...'
                 bat """
-                    if not exist ${VENV_DIR} (
-                        python -m venv ${VENV_DIR}
+                    if not exist %VENV_DIR% (
+                        python -m venv %VENV_DIR%
                     )
-                    call ${VENV_DIR}\\Scripts\\activate
-                    pip install --quiet --no-input --disable-pip-version-check --requirement requirements.txt
+
+                    %PYTHON% -m pip install --upgrade pip
+                    %PYTHON% -m pip install --quiet --no-input --disable-pip-version-check -r requirements.txt
                 """
             }
         }
@@ -35,8 +38,7 @@ pipeline {
                 echo 'Running Selenium tests for CredKart...'
                 retry(2) {
                     bat """
-                        call ${VENV_DIR}\\Scripts\\activate
-                        pytest -v -s testcases/ --browser ${params.BROWSER} --alluredir=allure_reports -n 4
+                        %PYTHON% -m pytest -v -s testcases/ --browser ${params.BROWSER} --alluredir=allure_reports -n 4
                     """
                 }
             }
@@ -48,7 +50,6 @@ pipeline {
             echo 'Pipeline completed.'
             archiveArtifacts artifacts: 'reports/*.html, screenshots/*.png, logs/*.log', fingerprint: true
 
-            // Allure report publishing
             allure([
                 includeProperties: false,
                 jdk: '',
