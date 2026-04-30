@@ -2,14 +2,30 @@ from page_objects.add_item_to_cart import AddItemInCart
 from page_objects.add_item_to_wishlist import AddItemToWishlist
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
-from utilities.read_config import RCLoginPage, RCWishlist
-import allure, pytest
+from utilities.read_config import RCWishlist
+import allure, json, pytest
 
 
 class TestAddItemToWishlist:
+    """
+    Test class for wishlist functionality of the CredKart application.
+
+    This class contains test methods to verify adding items to the user wishlist,
+    including login, item selection, wishlist addition, and success verification.
+
+    Test Flow:
+    1. Login with existing user credentials
+    2. Navigate to products and select an item
+    3. Add item to wishlist
+    4. Verify successful addition via confirmation message
+    5. Logout
+
+    Dependencies:
+    - Valid user data in test_data/user_details.json
+    - AddItemInCart, AddItemToWishlist, and LoginPage page object classes
+    - Logger utility for detailed test execution logs
+    """
     log = Loggen.log_generator()
-    email = RCLoginPage.email()
-    password = RCLoginPage.password()
     confirmation_text = RCWishlist.confirmation_text()
 
     @allure.epic('Credkart Project')
@@ -21,8 +37,40 @@ class TestAddItemToWishlist:
     @allure.link('https://automation.credence.in/shop', 'Wishlist')
     @allure.title('CredKart')
     @allure.description('This Test Case adds new Item into the Wishlist.')
-    @pytest.mark.order(6)
-    def test_add_item_to_wishlist(self, setup):
+    @pytest.mark.order(8)
+    def test_add_item_to_wishlist(self, setup, data_dir):
+        """
+        Test adding an item to the user wishlist.
+
+        This test verifies the wishlist functionality by adding a product to
+        the user's wishlist and confirming the successful addition.
+
+        Steps:
+        1. Read user credentials from JSON file
+        2. Login to the application
+        3. Select a product from the catalog
+        4. Add the selected item to wishlist
+        5. Verify success through confirmation message
+        6. Logout
+
+        Args:
+            setup: Pytest fixture providing WebDriver instance
+            data_dir: Pytest fixture providing path to test_data directory
+
+        Asserts:
+            True if item successfully added to wishlist (confirmation message appears)
+            False if addition fails or confirmation not received
+
+        Notes:
+            - Assumes at least one product is available in the catalog
+            - Uses configured confirmation text for verification
+            - Wishlist persists across sessions for logged-in users
+        """
+
+        with open(data_dir / "user_details.json", "r") as f:
+            user_details = json.load(f)
+            self.email = user_details["email"]
+            self.password = user_details["password"]
 
         self.log.info('********** Test Session Started. **********')
         self.driver = setup

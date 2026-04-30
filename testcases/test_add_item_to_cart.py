@@ -1,15 +1,30 @@
 from page_objects.add_item_to_cart import AddItemInCart
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
-from utilities.read_config import RCLoginPage, RCAddItem
-import allure, pytest
+from utilities.read_config import RCAddItem
+import allure, json, pytest
 
 
 class TestAddItemToCart:
+    """
+    Test class for shopping cart functionality of the CredKart application.
+
+    This class contains test methods to verify adding items to the shopping cart,
+    including login, item selection, cart addition, and success verification.
+
+    Test Flow:
+    1. Login with existing user credentials
+    2. Navigate to products and select an item
+    3. Add item to shopping cart
+    4. Verify successful addition via confirmation message
+    5. Continue shopping and logout
+
+    Dependencies:
+    - Valid user data in test_data/user_details.json
+    - AddItemInCart and LoginPage page object classes
+    - Logger utility for detailed test execution logs
+    """
     log = Loggen.log_generator()
-    email = RCLoginPage.email()
-    password = RCLoginPage.password()
-    name = RCLoginPage.name()
     confirmation_text = RCAddItem.confirmation_text()
 
     @allure.epic('Credkart Project')
@@ -21,8 +36,40 @@ class TestAddItemToCart:
     @allure.link('https://automation.credence.in/shop', 'Cart')
     @allure.title('CredKart')
     @allure.description('This Test Case adds new Item into the Cart.')
-    @pytest.mark.order(4)
-    def test_add_item_to_cart(self, setup):
+    @pytest.mark.order(5)
+    def test_add_item_to_cart(self, setup, data_dir):
+        """
+        Test adding an item to the shopping cart.
+
+        This test verifies the complete flow of adding a product to the cart,
+        including user authentication, product selection, and confirmation.
+
+        Steps:
+        1. Read user credentials from JSON file
+        2. Login to the application
+        3. Select a product from the catalog
+        4. Add the selected item to cart
+        5. Verify success through confirmation message
+        6. Continue shopping and logout
+
+        Args:
+            setup: Pytest fixture providing WebDriver instance
+            data_dir: Pytest fixture providing path to test_data directory
+
+        Asserts:
+            True if item successfully added to cart (confirmation message appears)
+            False if addition fails or confirmation not received
+
+        Notes:
+            - Assumes at least one product is available in the catalog
+            - Uses configured confirmation text for verification
+            - Captures screenshots on pass/fail for reporting
+        """
+
+        with open(data_dir / "user_details.json", "r") as f:
+            user_details = json.load(f)
+            self.email = user_details["email"]
+            self.password = user_details["password"]
 
         self.log.info('********** Test Session Started. **********')
         self.driver = setup

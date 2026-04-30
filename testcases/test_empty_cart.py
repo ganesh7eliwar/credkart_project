@@ -1,17 +1,31 @@
-from pytest_dependency import depends
-
 from page_objects.add_item_to_cart import AddItemInCart
 from page_objects.empty_cart_wishlist import EmptyCartOrWishlist
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
-from utilities.read_config import RCLoginPage, RCEmptyCartWishlist
-import allure, pytest
+from utilities.read_config import RCEmptyCartWishlist
+import allure, json, pytest
 
 
 class TestEmptyCart:
+    """
+    Test class for emptying shopping cart functionality of the CredKart application.
+
+    This class contains test methods to verify removing all items from the shopping cart,
+    including adding items first, then emptying the cart, and verifying the empty state.
+
+    Test Flow:
+    1. Login with existing user credentials
+    2. Add an item to the cart (prerequisite)
+    3. Navigate to cart and click empty cart
+    4. Verify cart is empty via confirmation message
+    5. Logout
+
+    Dependencies:
+    - Valid user data in test_data/user_details.json
+    - AddItemInCart, EmptyCartOrWishlist, and LoginPage page object classes
+    - Logger utility for detailed test execution logs
+    """
     log = Loggen.log_generator()
-    email = RCLoginPage.email()
-    password = RCLoginPage.password()
     confirmation_text = RCEmptyCartWishlist.empty_cart_confirmation()
 
     @allure.epic('Credkart Project')
@@ -23,8 +37,40 @@ class TestEmptyCart:
     @allure.link('https://automation.credence.in/shop', 'Cart')
     @allure.title('CredKart')
     @allure.description('This Test Case removes the Items from the Cart.')
-    @pytest.mark.order(5)
-    def test_empty_cart(self, setup):
+    @pytest.mark.order(6)
+    def test_empty_cart(self, setup, data_dir):
+        """
+        Test emptying all items from the shopping cart.
+
+        This test verifies the cart emptying functionality by first adding an item
+        to the cart, then removing all items and confirming the cart is empty.
+
+        Steps:
+        1. Read user credentials from JSON file
+        2. Login to the application
+        3. Add an item to cart (to have something to empty)
+        4. Click the empty cart button
+        5. Verify cart is empty through confirmation message
+        6. Logout
+
+        Args:
+            setup: Pytest fixture providing WebDriver instance
+            data_dir: Pytest fixture providing path to test_data directory
+
+        Asserts:
+            True if cart successfully emptied (confirmation message matches)
+            False if emptying fails or confirmation not received
+
+        Notes:
+            - Requires adding an item first to test the empty functionality
+            - Uses configured confirmation text for verification
+            - Tests the complete cart management workflow
+        """
+
+        with open(data_dir / "user_details.json", "r") as f:
+            user_details = json.load(f)
+            self.email = user_details["email"]
+            self.password = user_details["password"]
 
         self.log.info('********** Test Session Started. **********')
         self.driver = setup

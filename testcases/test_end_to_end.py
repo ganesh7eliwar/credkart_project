@@ -2,20 +2,37 @@ from page_objects.add_item_to_cart import AddItemInCart
 from page_objects.checkout import Checkout
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
-from utilities.read_config import RCLoginPage, RCBillingShippingAddress, RCPayment, RCCardNumber, RCOrderPlaced
-import allure, pytest, random
+from utilities.read_config import RCBillingShippingAddress, RCPayment, RCCardNumber, RCOrderPlaced
+import allure, json, pytest, random
 
 
 class TestEndToEnd:
+    """
+    Test class for end-to-end e-commerce workflow of the CredKart application.
+
+    This class contains comprehensive test methods that simulate a complete
+    customer journey from login through checkout and order confirmation.
+    It validates the entire shopping flow including cart management,
+    billing details, and payment processing.
+
+    Test Flow:
+    1. Login with existing user credentials
+    2. Add random number of items to cart
+    3. Verify cart calculations (subtotal, grand total)
+    4. Proceed to checkout with billing/shipping details
+    5. Complete payment with card details
+    6. Verify order confirmation and success message
+
+    Dependencies:
+    - Valid user data in test_data/user_details.json
+    - Multiple page object classes (LoginPage, AddItemInCart, Checkout)
+    - Configuration utilities for test data (addresses, payment details)
+    - Logger utility for detailed test execution logs
+    """
     log = Loggen.log_generator()
-    email = RCLoginPage.email()
-    password = RCLoginPage.password()
-    first_name = RCBillingShippingAddress.first_name()
-    last_name = RCBillingShippingAddress.last_name()
     phone = RCBillingShippingAddress.phone()
     address = RCBillingShippingAddress.address()
     zip_code = RCBillingShippingAddress.zip_code()
-    owner = RCPayment.owner()
     cvv = RCPayment.cvv()
     card_number = RCCardNumber.card_number()
     confirmation_message = RCOrderPlaced.confirmation_msg()
@@ -29,8 +46,42 @@ class TestEndToEnd:
     @allure.link('https://automation.credence.in/shop', 'End to End')
     @allure.title('CredKart')
     @allure.description('This Test case is End to End Testcase that includes login into the WebSite and Checkout.')
-    @pytest.mark.order(10)
-    def test_end_to_end(self, setup):
+    @pytest.mark.order(4)
+    def test_end_to_end(self, setup, data_dir):
+        """
+        Test complete end-to-end e-commerce workflow.
+
+        This test simulates a full customer purchase journey:
+        1. Login with registered user credentials
+        2. Add 3-5 random items to shopping cart
+        3. Navigate to cart and verify subtotal/grand total calculations
+        4. Proceed to checkout and fill billing/shipping information
+        5. Enter payment details (card number, CVV, expiry)
+        6. Complete purchase and verify order confirmation
+
+        Args:
+            setup: Pytest fixture providing WebDriver instance
+            data_dir: Pytest fixture providing path to test_data directory
+
+        Asserts:
+            True if entire flow completes successfully with order confirmation
+            False if any step fails (calculations, payment, confirmation)
+
+        Notes:
+            - Uses random number of items (3-5) for varied test scenarios
+            - Validates both subtotal and grand total calculations
+            - Captures order number upon successful completion
+        """
+
+        with open(data_dir / "user_details.json", "r") as f:
+            user_details = json.load(f)
+            parts = user_details["name"].split()
+            self.email = user_details["email"]
+            self.password = user_details["password"]
+            self.owner = user_details["name"]
+            self.first_name = parts[0]
+            self.last_name = parts[1]
+
         self.log.info('********** Test Session Started. **********')
         self.driver = setup
         self.lp = LoginPage(self.driver)
@@ -65,12 +116,14 @@ class TestEndToEnd:
         if self.co.expected_subtotal() == self.co.actual_subtotal():
             self.log.info('Entered info First If block.')
             self.log.info(
-                f'Both Expected Subtotal: {self.co.expected_subtotal()} and Actual Subtotal: {self.co.actual_subtotal()} are Equal.')
+                f'Both Expected Subtotal: {self.co.expected_subtotal()} '
+                f'and Actual Subtotal: {self.co.actual_subtotal()} are Equal.')
 
             if self.co.expected_grand_total() == self.co.actual_grand_total():
                 self.log.info('Entered info Second If block.')
                 self.log.info(
-                    f'Both Expected Grand Total: {self.co.expected_grand_total()} and Actual Grand Total: {self.co.actual_grand_total()} are Equal.')
+                    f'Both Expected Grand Total: {self.co.expected_grand_total()} '
+                    f'and Actual Grand Total: {self.co.actual_grand_total()} are Equal.')
                 self.co.proceed_to_checkout_button()
                 self.log.info('Clicked on Proceed to Checkout Button.')
                 self.co.first_name(self.first_name)

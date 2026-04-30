@@ -5,6 +5,23 @@ import allure, pytest
 
 
 class TestURLCheck:
+    """
+    Test class for basic URL and page accessibility of the CredKart application.
+
+    This class contains sanity check tests to verify that the application
+    is accessible and loads correctly. It serves as a foundational test
+    that should run before other functional tests.
+
+    Test Flow:
+    1. Navigate to the application URL
+    2. Verify page title matches expected value
+    3. Capture screenshot for visual verification
+
+    Dependencies:
+    - URLCheck page object class for screenshot utilities
+    - Configuration utility for expected page title
+    - Logger utility for detailed test execution logs
+    """
     title = ReadConfigPD.page_title()
     log = Loggen.log_generator()
 
@@ -19,6 +36,29 @@ class TestURLCheck:
     @allure.description('This is to check whether the Url is working Properly or not.')
     @pytest.mark.order(1)
     def test_url_check(self, setup):
+        """
+        Test basic URL accessibility and page title verification.
+
+        This sanity test ensures the CredKart application is reachable and
+        loads correctly by checking the page title against expected value.
+
+        Steps:
+        1. Navigate to application URL (handled by setup fixture)
+        2. Verify page title matches configured expected title
+        3. Capture screenshot for manual verification if needed
+
+        Args:
+            setup: Pytest fixture providing WebDriver instance (includes URL navigation)
+
+        Asserts:
+            True if page title matches expected title
+            False if title doesn't match or page fails to load
+
+        Notes:
+            - This is typically the first test to run in a test suite
+            - Critical severity as it validates basic application accessibility
+            - Should be included in smoke test suites
+        """
 
         self.log.info('********** Test Session Started. **********')
         self.driver = setup

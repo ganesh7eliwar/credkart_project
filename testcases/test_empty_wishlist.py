@@ -3,14 +3,12 @@ from page_objects.add_item_to_wishlist import AddItemToWishlist
 from page_objects.empty_cart_wishlist import EmptyCartOrWishlist
 from page_objects.login_page import LoginPage
 from utilities.logger import Loggen
-from utilities.read_config import RCLoginPage, RCEmptyCartWishlist
-import allure, pytest
+from utilities.read_config import RCEmptyCartWishlist
+import allure, json, pytest
 
 
 class TestEmptyWishlist:
     log = Loggen.log_generator()
-    email = RCLoginPage.email()
-    password = RCLoginPage.password()
     confirmation_text = RCEmptyCartWishlist.empty_wishlist_confirmation()
 
     @allure.epic('Credkart Project')
@@ -23,7 +21,12 @@ class TestEmptyWishlist:
     @allure.title('CredKart')
     @allure.description('This Test Case removes the Items from the Wishlist.')
     @pytest.mark.order(7)
-    def test_empty_wishlist(self, setup):
+    def test_empty_wishlist(self, setup, data_dir):
+
+        with open(data_dir / "user_details.json", "r") as f:
+            user_details = json.load(f)
+            self.email = user_details["email"]
+            self.password = user_details["password"]
 
         self.log.info('********** Test Session Started. **********')
         self.driver = setup

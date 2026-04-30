@@ -6,6 +6,27 @@ import allure, pytest
 
 
 class TestLoginDDT:
+    """
+    Test class for data-driven login testing of the CredKart application.
+
+    This class implements Data-Driven Testing (DDT) approach for login functionality,
+    reading test data from Excel files to test multiple login scenarios including
+    valid and invalid credential combinations.
+
+    Test Flow:
+    1. Read test data from Excel file (Credkart_Login_Data.xlsx)
+    2. Iterate through each row of test data
+    3. Attempt login with each set of credentials
+    4. Verify expected vs actual results
+    5. Track pass/fail status for each iteration
+    6. Assert overall test result based on status list
+
+    Dependencies:
+    - Excel file: test_data/Credkart_Login_Data.xlsx with login_data sheet
+    - LoginPage page object class
+    - excelutils utility for Excel file operations
+    - Logger utility for detailed test execution logs
+    """
     file = './test_data/Credkart_Login_Data.xlsx'
     sheet = 'login_data'
     log = Loggen.log_generator()
@@ -22,6 +43,40 @@ class TestLoginDDT:
     @allure.description('This is a Data Driven test which gives different Inputs while Login.')
     @pytest.mark.order(9)
     def test_login_ddt(self, setup):
+        """
+        Test login functionality using data-driven approach with Excel data.
+
+        This test reads login credentials and expected results from an Excel file
+        and performs multiple login attempts to validate both successful and failed
+        login scenarios.
+
+        Excel Data Format (login_data sheet):
+        | Email | Password | Expected Result |
+        |-------|----------|-----------------|
+        | valid@email.com | validpass | Pass |
+        | valid@email.com | invalidpass | Fail |
+        | invalid@email.com | validpass | Fail |
+
+        Steps:
+        1. Read total rows from Excel sheet
+        2. Loop through each data row (starting from row 2)
+        3. Extract email, password, and expected result
+        4. Attempt login and verify against expected result
+        5. Track results in status list
+        6. Assert test passes only if no failures occurred
+
+        Args:
+            setup: Pytest fixture providing WebDriver instance
+
+        Asserts:
+            True if all login attempts match expected results
+            False if any login attempt doesn't match expected result
+
+        Notes:
+            - Does not perform logout between iterations for efficiency
+            - Uses status list to track individual test case results
+            - Comprehensive logging for each iteration
+        """
 
         self.log.info('********** Test Session Started. **********')
         self.driver = setup
