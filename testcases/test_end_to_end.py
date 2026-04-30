@@ -37,16 +37,28 @@ class TestEndToEnd:
     card_number = RCCardNumber.card_number()
     confirmation_message = RCOrderPlaced.confirmation_msg()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('End to End')
-    @allure.story('End to End Test from Login to Checkout.')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('Complete Purchase Flow')
+    @allure.story('End-to-End Purchase Journey from Login to Order Confirmation')
+    @allure.title('End-to-End Purchase - Complete Customer Journey')
+    @allure.description('Comprehensive end-to-end test validating the complete purchase flow: '
+                        'user authentication, product discovery, cart management, checkout, '
+                        'billing information entry, payment processing, and order confirmation.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'normal')
     @allure.severity(allure.severity_level.NORMAL)
-    # @allure.tag('smoke')
-    @allure.link('https://automation.credence.in/shop', 'End to End')
-    @allure.title('CredKart')
-    @allure.description('This Test case is End to End Testcase that includes login into the WebSite and Checkout.')
+    @allure.tag('regression', 'e2e', 'integration', 'user-journey', 'purchase-flow', 'critical-path',
+                'checkout', 'payment', 'order-placement')
+    @allure.link('https://automation.credence.in/shop', 'Complete Application')
     @pytest.mark.order(4)
+    @pytest.mark.regression
+    @pytest.mark.integration
+    @pytest.mark.e2e
+    @pytest.mark.user_journey
+    @pytest.mark.purchase_flow
+    @pytest.mark.checkout
+    @pytest.mark.payment
+    @pytest.mark.critical
     def test_end_to_end(self, setup, data_dir):
         """
         Test complete end-to-end e-commerce workflow.

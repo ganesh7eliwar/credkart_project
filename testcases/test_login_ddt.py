@@ -32,16 +32,27 @@ class TestLoginDDT:
     log = Loggen.log_generator()
     user_name = RCLoginPage.name()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Data Driven Test')
-    @allure.story('Verify Login with Data')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('User Management & Authentication')
+    @allure.story('Data-Driven Login Testing with Multiple Credentials from Excel')
+    @allure.title('Login Data-Driven Tests - Excel-Based Credential Validation')
+    @allure.description('Data-driven test validating login functionality with multiple credential combinations '
+                        'loaded from Excel file. Tests both valid and invalid credential scenarios to verify '
+                        'proper authentication and error handling.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'normal')
     @allure.severity(allure.severity_level.NORMAL)
-    # @allure.tag('smoke', 'login')
-    @allure.link('https://automation.credence.in/shop', 'Login')
-    @allure.title('Credkart')
-    @allure.description('This is a Data Driven test which gives different Inputs while Login.')
+    @allure.tag('regression', 'user-management', 'authentication', 'login-flow', 'data-driven',
+                'ddt', 'excel-based', 'credential-validation')
+    @allure.link('https://automation.credence.in/shop', 'Login Page')
     @pytest.mark.order(9)
+    @pytest.mark.regression
+    @pytest.mark.user_management
+    @pytest.mark.authentication
+    @pytest.mark.login
+    @pytest.mark.ddt
+    @pytest.mark.data_driven
+    @pytest.mark.parametrize_excel
     def test_login_ddt(self, setup):
         """
         Test login functionality using data-driven approach with Excel data.
@@ -53,9 +64,9 @@ class TestLoginDDT:
         Excel Data Format (login_data sheet):
         | Email | Password | Expected Result |
         |-------|----------|-----------------|
-        | valid@email.com | validpass | Pass |
+        | valid@email.com | valid-pass | Pass |
         | valid@email.com | invalidpass | Fail |
-        | invalid@email.com | validpass | Fail |
+        | invalid@email.com | valid-pass | Fail |
 
         Steps:
         1. Read total rows from Excel sheet
@@ -88,10 +99,13 @@ class TestLoginDDT:
         self.lp = LoginPage(self.driver)
         self.iteration = 0
 
+        # Iterate through each data row in Excel (starting from row 2, skipping header)
         for row in range(2, self.rows + 1):
 
             self.iteration += 1
             self.log.info(f'Entered into for loop, Interation No.: {self.iteration}.')
+
+            # Read test data from Excel: email (column 1), password (column 2), expected result (column 3)
             self.email = excelutils.read_data(self.file, self.sheet, row, 1)
             self.password = excelutils.read_data(self.file, self.sheet, row, 2)
             self.expected_result = excelutils.read_data(self.file, self.sheet, row, 3)

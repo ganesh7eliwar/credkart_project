@@ -24,6 +24,7 @@ class Loggen:
         log.info("This is an info message")
         log.error("This is an error message")
     """
+
     @staticmethod
     def log_generator():
         """
@@ -32,36 +33,70 @@ class Loggen:
         This method inspects the call stack to get the name of the calling function,
         creates a unique logger for it, and sets up file logging with a detailed format.
 
+        How it works:
+            1. Uses Python's inspect module to extract the calling function name from the stack
+            2. Creates a logger instance with the function name as identifier
+            3. Configures file handler to write to ./logs/credkart_logs.log
+            4. Applies a detailed log format including timestamp, level, and line number
+            5. Sets logging level to DEBUG (lowest level) to capture all message types
+
         Returns:
             logging.Logger: Configured logger instance ready for use
 
         Log Format:
             %(asctime)s | %(levelname)s | %(name)s | %(funcName)s | %(lineno)s | %(message)s
 
+        Explanation of format fields:
+            - %(asctime)s: Timestamp when log entry was created (e.g., 2023-12-01 10:30:45,123)
+            - %(levelname)s: Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+            - %(name)s: Logger name (set to calling function name by this method)
+            - %(funcName)s: Name of the function that created the log entry
+            - %(lineno)s: Line number in the source code where log was called
+            - %(message)s: The actual log message
+
         Example Log Output:
             2023-12-01 10:30:45,123 | INFO | test_login | test_login | 25 | User login successful
+
+        Note:
+            - Multiple loggers write to the same file (credkart_logs.log)
+            - Each test maintains its own logger instance but shares the log file
+            - Log file persists between test runs (appends new entries)
         """
-        # Get the name of the calling function using inspect
+
+        # STEP 1: Extract the calling function's name from the call stack
+        # inspect.stack()[1] gets the immediate caller's frame
+        # inspect.stack()[1][3] extracts the function name from that frame
         log_name = inspect.stack()[1][3]
 
-        # Create a logger with the function name
+        # STEP 2: Create a logger instance with the extracted function name
+        # If logger with this name already exists, get existing instance (singleton pattern)
         logger = logging.getLogger(log_name)
 
-        # Create a file handler for writing logs to file
+        # STEP 3: Create a file handler that appends logs to the specified file path
+        # './logs/credkart_logs.log' - All loggers write to this central file
+        # FileHandler(mode='a') - Append mode (default) - doesn't overwrite existing logs
         log_file = logging.FileHandler(f'./logs/credkart_logs.log')
 
-        # Define the log message format
+        # STEP 4: Define the log message format with all available metadata
+        # This format makes each log entry highly informative and traceable
         log_format = logging.Formatter(
-            "%(asctime)s | %(levelname)s | %(name)s | %(funcName)s | %(lineno)s | %(message)s")
+            "%(asctime)s | %(levelname)s | %(name)s | %(funcName)s | %(lineno)s | %(message)s"
+        )
 
-        # Apply the format to the file handler
+        # STEP 5: Apply the defined format to the file handler
+        # This ensures all log entries written by this handler follow the format
         log_file.setFormatter(log_format)
 
-        # Add the handler to the logger
+        # STEP 6: Attach the configured file handler to the logger
+        # A logger can have multiple handlers (file, console, etc.)
+        # We only use file handler for persistent storage
         logger.addHandler(log_file)
 
-        # Set the logging level to DEBUG to capture all levels of messages
+        # STEP 7: Set the logging level to DEBUG (lowest level)
+        # DEBUG < INFO < WARNING < ERROR < CRITICAL
+        # Setting to DEBUG ensures all message levels are captured
         logger.setLevel(logging.DEBUG)
 
-        # Return the configured logger
+        # STEP 8: Return the fully configured logger instance
+        # The caller can now use log.info(), log.warning(), log.error(), etc.
         return logger

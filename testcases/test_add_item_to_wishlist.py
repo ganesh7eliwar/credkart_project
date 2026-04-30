@@ -28,16 +28,22 @@ class TestAddItemToWishlist:
     log = Loggen.log_generator()
     confirmation_text = RCWishlist.confirmation_text()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Add Item.')
-    @allure.story('Add Item to Wishlist.')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('Wishlist Management')
+    @allure.story('Add Single Item to Wishlist/Favorites')
+    @allure.title('Add Item to Wishlist - Save Product for Later Purchase')
+    @allure.description('Verifies ability to add products to wishlist/saved items. Tests complete flow: '
+                        'user login, product selection, add to wishlist, and confirmation message verification.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'normal')
     @allure.severity(allure.severity_level.NORMAL)
-    # @allure.tag('smoke')
-    @allure.link('https://automation.credence.in/shop', 'Wishlist')
-    @allure.title('CredKart')
-    @allure.description('This Test Case adds new Item into the Wishlist.')
+    @allure.tag('regression', 'wishlist-management', 'shopping', 'product-management', 'favorites')
+    @allure.link('https://automation.credence.in/shop', 'Wishlist Page')
     @pytest.mark.order(8)
+    @pytest.mark.regression
+    @pytest.mark.wishlist_management
+    @pytest.mark.shopping
+    @pytest.mark.product_management
     def test_add_item_to_wishlist(self, setup, data_dir):
         """
         Test adding an item to the user wishlist.

@@ -30,16 +30,26 @@ class TestRegister:
     email = Generator.generate_email()
     password = Generator.password()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Registration')
-    @allure.story('Registering a user for the first time.')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('User Management & Authentication')
+    @allure.story('New User Registration with Random Generated Data')
+    @allure.title('User Registration - New Account Creation with Random Data')
+    @allure.description('Verifies complete user registration flow by generating random credentials, '
+                        'filling registration form, and saving user data for subsequent tests. '
+                        'Critical for test execution as it creates user data dependency for login and checkout tests.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'critical')
     @allure.severity(allure.severity_level.CRITICAL)
-    # @allure.tag('sanity', 'regression')
-    @allure.link('https://automation.credence.in/shop', 'Registration')
-    @allure.title('Credkart')
-    @allure.description('This is a registration test.')
+    @allure.tag('sanity', 'regression', 'user-management', 'critical-path', 'prerequisite', 'data-factory')
+    @allure.link('https://automation.credence.in/shop', 'Registration Page')
     @pytest.mark.order(2)
+    @pytest.mark.smoke
+    @pytest.mark.sanity
+    @pytest.mark.regression
+    @pytest.mark.user_management
+    @pytest.mark.critical
+    @pytest.mark.prerequisite
+    @pytest.mark.data_factory
     def test_register(self, setup, data_dir):
         """
         Test user registration with randomly generated credentials.
@@ -48,7 +58,7 @@ class TestRegister:
         1. Generating unique user data (name, email, password)
         2. Filling out the registration form
         3. Submitting the registration
-        4. Verifying successful registration by checking user name display
+        4. Verifying successful registration by checking username display
         5. Saving user details to JSON files for use in other tests
 
         Args:
@@ -69,61 +79,83 @@ class TestRegister:
         self.log.info('Driver Setup Successful.')
         self.rp = RegisterPage(self.driver)
         self.log.info(f'Test Run on Driver --> {self.driver}')
-        self.rp.register_button()
-        self.log.info('Clicked on Register Button Link and navigate to Register Page.')
-        self.rp.name(self.name)
-        self.log.info(f'Entered Name in Name Text Box. --> {self.name}')
-        self.rp.email(self.email)
-        self.log.info(f'Entered Email in Email Text Box. --> {self.email}')
-        self.rp.password(self.password)
-        self.log.info(f'Entered Password in Password Text Box. --> {self.password}')
-        self.rp.confirm_password(self.password)
-        self.log.info(f'Entered Password in Confirm Password Text Box. {self.password}')
-        self.rp.register_btn()
-        self.log.info('Clicked on Register Button.')
 
+        # Step 1: Navigate to registration page
+        with allure.step("Navigate to Registration Page"):
+            self.rp.register_button()
+            self.log.info('Clicked on Register Button Link and navigate to Register Page.')
+
+        # Step 2: Fill registration form with generated data
+        with allure.step(f"Enter registration name: {self.name}"):
+            self.rp.name(self.name)
+            self.log.info(f'Entered Name in Name Text Box. --> {self.name}')
+
+        with allure.step(f"Enter registration email: {self.email}"):
+            self.rp.email(self.email)
+            self.log.info(f'Entered Email in Email Text Box. --> {self.email}')
+
+        with allure.step("Enter registration password"):
+            self.rp.password(self.password)
+            self.log.info(f'Entered Password in Password Text Box. --> {self.password}')
+
+        with allure.step("Confirm registration password"):
+            self.rp.confirm_password(self.password)
+            self.log.info(f'Entered Password in Confirm Password Text Box. {self.password}')
+
+        # Step 3: Submit registration form
+        with allure.step("Submit registration form"):
+            self.rp.register_btn()
+            self.log.info('Clicked on Register Button.')
+
+        # Step 4: Verify registration success
         if self.rp.user_name() == self.name:
-            self.log.info('Entered info If block.')
-            self.log.info(f'{self.rp.user_name()} == {self.name}')
-            self.log.info('User Registration Successful.')
-            self.log.info('Test Register Passed.')
-            self.rp.screenshot_on_pass()
-            self.log.info('Captured Screenshot.')
-            self.rp.allure_pass()
+            with allure.step("Verify successful user registration"):
+                self.log.info('Entered info If block.')
+                self.log.info(f'{self.rp.user_name()} == {self.name}')
+                self.log.info('User Registration Successful.')
+                self.log.info('Test Register Passed.')
+                self.rp.screenshot_on_pass()
+                self.log.info('Captured Screenshot.')
+                self.rp.allure_pass()
+
             assert True
         else:
-            self.log.info('Entered into Else Block.')
-            self.log.info('User Registration Unsuccessful.')
-            self.log.info('Test Register Failed.')
-            self.rp.screenshot_on_fail()
-            self.log.info('Captured Screenshot.')
-            self.rp.allure_fail()
+            with allure.step("Verify registration failure"):
+                self.log.info('Entered into Else Block.')
+                self.log.info('User Registration Unsuccessful.')
+                self.log.info('Test Register Failed.')
+                self.rp.screenshot_on_fail()
+                self.log.info('Captured Screenshot.')
+                self.rp.allure_fail()
+
             assert False
 
-        self.log.info('Saving User Details to JSON File.')
-        user_details = {
-            "name": self.name,
-            "email": self.email,
-            "password": self.password
-        }
+        # Step 5: Save user details to JSON for later tests
+        with allure.step("Save user credentials to test data files"):
+            self.log.info('Saving User Details to JSON File.')
+            user_details = {
+                "name": self.name,
+                "email": self.email,
+                "password": self.password
+            }
 
-        with open(data_dir / "user_details.json", 'w') as f:
-            json.dump(user_details, f, indent=4)
+            with open(data_dir / "user_details.json", 'w') as f:
+                json.dump(user_details, f, indent=4)
 
-        self.log.info('User Details saved to all_user_details.json file.')
-        file_path = data_dir / "all_user_details.json"
-        try:
-            with open(file_path, "r") as f:
-                all_user_details = json.load(f)
-                if not isinstance(all_user_details, list):
-                    all_user_details = [all_user_details]
-        except (FileNotFoundError, json.JSONDecodeError):
-            all_user_details = []
+            self.log.info('User Details saved to all_user_details.json file.')
+            file_path = data_dir / "all_user_details.json"
+            try:
+                with open(file_path, "r") as f:
+                    all_user_details = json.load(f)
+                    if not isinstance(all_user_details, list):
+                        all_user_details = [all_user_details]
+            except (FileNotFoundError, json.JSONDecodeError):
+                all_user_details = []
 
-        self.log.info('Appending new user details to all_user_details list.')
-        all_user_details.append(user_details)
+            self.log.info('Appending new user details to all_user_details list.')
+            all_user_details.append(user_details)
 
-        with open(file_path, "w") as f:
-            json.dump(all_user_details, f, indent=4)
+            with open(file_path, "w") as f:
+                json.dump(all_user_details, f, indent=4)
 
         self.log.info('========== Test Session Finished. ==========')

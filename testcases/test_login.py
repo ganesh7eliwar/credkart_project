@@ -27,16 +27,23 @@ class TestLogin:
     log = Loggen.log_generator()
     title = ReadConfigPD.page_title()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Login')
-    @allure.story('Login with valid credentials')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('User Management & Authentication')
+    @allure.story('User Login with Valid Credentials')
+    @allure.title('User Login - Successful Authentication with Valid Credentials')
+    @allure.description('Verifies that registered users can successfully authenticate using valid email and password. '
+                        'Tests complete login flow including credential entry, authentication, and user session establishment.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'normal')
     @allure.severity(allure.severity_level.NORMAL)
-    # @allure.tag('smoke')
-    @allure.link('https://automation.credence.in/shop', 'Login')
-    @allure.title('CredKart')
-    @allure.description('This is login test with valid credentials.')
+    @allure.tag('regression', 'user-management', 'authentication', 'critical-path', 'login-flow')
+    @allure.link('https://automation.credence.in/shop', 'Login Page')
     @pytest.mark.order(3)
+    @pytest.mark.regression
+    @pytest.mark.user_management
+    @pytest.mark.authentication
+    @pytest.mark.login
+    @pytest.mark.critical
     def test_login(self, setup, data_dir):
         """
         Test login functionality with valid user credentials.
@@ -72,33 +79,53 @@ class TestLogin:
         self.log.info('Driver Setup Successful.')
         self.log.info(f'Test Run on Driver --> {self.driver}')
         self.lp = LoginPage(self.driver)
-        self.lp.login()
-        self.log.info('Clicked on Login Button Link and navigate to Login Page.')
-        self.lp.user_email(self.email)
-        self.log.info(f'Entered Name in Name Text Box. --> {self.email}')
-        self.lp.user_password(self.password)
-        self.log.info(f'Entered Password in Name Text Box. --> {self.password}')
-        self.lp.login_button()
-        self.log.info('Clicked on Login Button.')
 
+        # Step 1: Navigate to login page
+        with allure.step("Navigate to Login Page"):
+            self.lp.login()
+            self.log.info('Clicked on Login Button Link and navigate to Login Page.')
+
+        # Step 2: Enter email credentials
+        with allure.step(f"Enter user email: {self.email}"):
+            self.lp.user_email(self.email)
+            self.log.info(f'Entered Name in Name Text Box. --> {self.email}')
+
+        # Step 3: Enter password credentials
+        with allure.step(f"Enter user password"):
+            self.lp.user_password(self.password)
+            self.log.info(f'Entered Password in Name Text Box. --> {self.password}')
+
+        # Step 4: Click login button to authenticate
+        with allure.step("Click login button to authenticate"):
+            self.lp.login_button()
+            self.log.info('Clicked on Login Button.')
+
+        # Step 5: Verify login success
         if self.name == self.lp.user_name():
-            self.log.info('Entered info If block.')
-            self.log.info('User Login Successful.')
-            self.log.info('Test Login Passed.')
-            self.lp.screenshot_on_pass()
-            self.log.info('Captured Screenshot.')
-            self.lp.allure_pass()
-            self.lp.logout_dd_button()
-            self.lp.logout_button()
-            self.log.info('Clicked on Logout Button')
+            with allure.step("Verify successful authentication"):
+                self.log.info('Entered info If block.')
+                self.log.info('User Login Successful.')
+                self.log.info('Test Login Passed.')
+                self.lp.screenshot_on_pass()
+                self.log.info('Captured Screenshot.')
+                self.lp.allure_pass()
+
+            # Step 6: Logout
+            with allure.step("Logout from application"):
+                self.lp.logout_dd_button()
+                self.lp.logout_button()
+                self.log.info('Clicked on Logout Button')
+
             assert True
         else:
-            self.log.info('Entered into Else Block.')
-            self.log.info('User Login Unsuccessful.')
-            self.log.info('Test Login Failed.')
-            self.lp.screenshot_on_fail()
-            self.log.info('Captured Screenshot.')
-            self.lp.allure_fail()
+            with allure.step("Verify login failure"):
+                self.log.info('Entered into Else Block.')
+                self.log.info('User Login Unsuccessful.')
+                self.log.info('Test Login Failed.')
+                self.lp.screenshot_on_fail()
+                self.log.info('Captured Screenshot.')
+                self.lp.allure_fail()
+
             assert False
 
         self.log.info('========== Test Session Finished. ==========')

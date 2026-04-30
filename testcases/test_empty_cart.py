@@ -28,16 +28,22 @@ class TestEmptyCart:
     log = Loggen.log_generator()
     confirmation_text = RCEmptyCartWishlist.empty_cart_confirmation()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Empty Cart')
-    @allure.story('Remove Items from the Cart.')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('Shopping Cart Management')
+    @allure.story('Empty Shopping Cart - Remove All Items')
+    @allure.title('Empty Shopping Cart - Bulk Item Removal Functionality')
+    @allure.description('Verifies the empty cart functionality by adding a product, then removing all items. '
+                        'Validates cart state transitions and confirmation of empty cart status.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'normal')
     @allure.severity(allure.severity_level.NORMAL)
-    # @allure.tag('smoke')
-    @allure.link('https://automation.credence.in/shop', 'Cart')
-    @allure.title('CredKart')
-    @allure.description('This Test Case removes the Items from the Cart.')
+    @allure.tag('regression', 'cart-management', 'shopping', 'cleanup', 'state-management')
+    @allure.link('https://automation.credence.in/shop', 'Shopping Cart Page')
     @pytest.mark.order(6)
+    @pytest.mark.regression
+    @pytest.mark.cart_management
+    @pytest.mark.shopping
+    @pytest.mark.cleanup
     def test_empty_cart(self, setup, data_dir):
         """
         Test emptying all items from the shopping cart.

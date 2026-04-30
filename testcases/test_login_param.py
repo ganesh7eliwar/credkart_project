@@ -27,16 +27,27 @@ class TestLoginParam:
     user_name = RCLoginPage.name()
     log = Loggen.log_generator()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Parameterized Test')
-    @allure.story('Verify Login with Data')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('User Management & Authentication')
+    @allure.story('Parameterized Login Testing with Fixture-Based Multiple Credentials')
+    @allure.title('Login Parameterized Tests - Pytest Fixture-Based Credential Validation')
+    @allure.description('Parameterized test validating login functionality with multiple credential combinations '
+                        'provided via pytest fixtures. Tests both valid and invalid credential scenarios to ensure '
+                        'proper authentication handling and error state verification.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'normal')
     @allure.severity(allure.severity_level.NORMAL)
-    # @allure.tag('smoke', 'login')
-    @allure.link('https://automation.credence.in/shop', 'Login')
-    @allure.title('Credkart')
-    @allure.description('This is a Parameterized test which gives different Inputs while Login.')
+    @allure.tag('regression', 'user-management', 'authentication', 'login-flow', 'parametrized',
+                'fixture-based', 'credential-validation', 'multiple-scenarios')
+    @allure.link('https://automation.credence.in/shop', 'Login Page')
     @pytest.mark.order(10)
+    @pytest.mark.regression
+    @pytest.mark.user_management
+    @pytest.mark.authentication
+    @pytest.mark.login
+    # @pytest.mark.parametrize
+    @pytest.mark.data_driven
+    @pytest.mark.fixture_based
     def test_login_param(self, setup, data_for_login):
         """
         Test login functionality using parameterized pytest fixtures.

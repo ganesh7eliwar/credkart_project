@@ -27,16 +27,23 @@ class TestAddItemToCart:
     log = Loggen.log_generator()
     confirmation_text = RCAddItem.confirmation_text()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Add Item.')
-    @allure.story('Add Item to Cart.')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('Shopping Cart Management')
+    @allure.story('Add Single Item to Shopping Cart')
+    @allure.title('Add Item to Cart - Single Product Addition with Confirmation')
+    @allure.description('Verifies ability to add products to shopping cart. Tests complete flow: '
+                        'user login, product selection, add to cart, and confirmation message verification.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'normal')
     @allure.severity(allure.severity_level.NORMAL)
-    # @allure.tag('smoke')
-    @allure.link('https://automation.credence.in/shop', 'Cart')
-    @allure.title('CredKart')
-    @allure.description('This Test Case adds new Item into the Cart.')
+    @allure.tag('regression', 'cart-management', 'shopping', 'critical-path', 'product-addition')
+    @allure.link('https://automation.credence.in/shop', 'Shopping Cart Page')
     @pytest.mark.order(5)
+    @pytest.mark.regression
+    @pytest.mark.cart_management
+    @pytest.mark.shopping
+    @pytest.mark.product_management
+    @pytest.mark.critical
     def test_add_item_to_cart(self, setup, data_dir):
         """
         Test adding an item to the shopping cart.
@@ -76,42 +83,57 @@ class TestAddItemToCart:
         self.lp = LoginPage(self.driver)
         self.log.info('Driver Setup Successful.')
         self.log.info(f'Test Run on Driver --> {self.driver}')
-        self.lp.login()
-        self.log.info('Clicked on Login Button Link and navigate to Login Page.')
-        self.lp.user_email(self.email)
-        self.log.info(f'Entered Name in Name Text Box. --> {self.email}')
-        self.lp.user_password(self.password)
-        self.log.info(f'Entered Password in Password Text Box. --> {self.password}')
-        self.lp.login_button()
-        self.log.info('Clicked on Login Button.')
 
+        # Step 1: Login with registered user
+        with allure.step("Login to the application"):
+            self.lp.login()
+            self.log.info('Clicked on Login Button Link and navigate to Login Page.')
+            self.lp.user_email(self.email)
+            self.log.info(f'Entered Name in Name Text Box. --> {self.email}')
+            self.lp.user_password(self.password)
+            self.log.info(f'Entered Password in Password Text Box. --> {self.password}')
+            self.lp.login_button()
+            self.log.info('Clicked on Login Button.')
+
+        # Step 2: Select and add item to cart
         self.ai = AddItemInCart(self.driver)
-        self.ai.select_item()
-        self.log.info('Item Selected.')
-        self.ai.add_to_cart_button()
-        self.log.info('Item Added To Cart.')
+        with allure.step("Select product from catalog"):
+            self.ai.select_item()
+            self.log.info('Item Selected.')
 
+        with allure.step("Add selected item to shopping cart"):
+            self.ai.add_to_cart_button()
+            self.log.info('Item Added To Cart.')
+
+        # Step 3: Verify cart addition
         if self.confirmation_text in self.ai.confirmation_text():
-            self.log.info('Entered info If block.')
-            self.log.info('Item Added Successfully.')
-            self.ai.screenshot_on_pass()
-            self.log.info('Captured Screenshot.')
-            self.ai.allure_pass()
-            self.ai.continue_shopping_button()
-            self.log.info('Clicked on Continue Shopping Button.')
-            self.lp.logout_dd_button()
-            self.log.info('Clicked on Logout Dropdown Button.')
-            self.lp.logout_button()
-            self.log.info('Clicked on Logout Button.')
-            self.log.info('Test "Add Item To Cart" Passed.')
+            with allure.step("Verify item successfully added to cart"):
+                self.log.info('Entered info If block.')
+                self.log.info('Item Added Successfully.')
+                self.ai.screenshot_on_pass()
+                self.log.info('Captured Screenshot.')
+                self.ai.allure_pass()
+
+            # Step 4: Cleanup - continue shopping and logout
+            with allure.step("Continue shopping and logout"):
+                self.ai.continue_shopping_button()
+                self.log.info('Clicked on Continue Shopping Button.')
+                self.lp.logout_dd_button()
+                self.log.info('Clicked on Logout Dropdown Button.')
+                self.lp.logout_button()
+                self.log.info('Clicked on Logout Button.')
+                self.log.info('Test "Add Item To Cart" Passed.')
+
             assert True
 
         else:
-            self.log.info('Entered into Else Block.')
-            self.ai.screenshot_on_fail()
-            self.log.info('Captured Screenshot.')
-            self.ai.allure_fail()
-            self.log.info('Test "Add Item To Cart" Failed.')
+            with allure.step("Verify item addition failure"):
+                self.log.info('Entered into Else Block.')
+                self.ai.screenshot_on_fail()
+                self.log.info('Captured Screenshot.')
+                self.ai.allure_fail()
+                self.log.info('Test "Add Item To Cart" Failed.')
+
             assert False
 
         self.log.info('========== Test Session Finished. ==========')

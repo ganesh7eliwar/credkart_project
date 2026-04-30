@@ -25,16 +25,25 @@ class TestURLCheck:
     title = ReadConfigPD.page_title()
     log = Loggen.log_generator()
 
-    @allure.epic('Credkart Project')
-    @allure.feature('Url')
-    @allure.story('Verify Url')
+    @allure.epic('CredKart Project - E-Commerce Automation')
+    @allure.feature('Application Accessibility')
+    @allure.story('Verify Application URL and Page Load')
+    @allure.title('URL Check - Application Accessibility Sanity Check')
+    @allure.description('Validates that the CredKart application is accessible and loads correctly. '
+                        'This sanity check verifies page title and basic page structure. '
+                        'Should run first in test suite to confirm environment readiness.')
     @allure.label('owner', 'ganesh_sateliwar')
+    @allure.label('severity', 'critical')
     @allure.severity(allure.severity_level.CRITICAL)
-    # @allure.tag('smoke', 'regression')
-    @allure.link('https://automation.credence.in/shop', 'URL')
-    @allure.title('Credkart')
-    @allure.description('This is to check whether the Url is working Properly or not.')
+    @allure.tag('smoke', 'sanity', 'accessibility', 'critical-path', 'prerequisite')
+    @allure.link('https://automation.credence.in/shop', 'Application URL')
     @pytest.mark.order(1)
+    @pytest.mark.smoke
+    @pytest.mark.sanity
+    @pytest.mark.regression
+    @pytest.mark.accessibility
+    @pytest.mark.critical
+    @pytest.mark.prerequisite
     def test_url_check(self, setup):
         """
         Test basic URL accessibility and page title verification.
