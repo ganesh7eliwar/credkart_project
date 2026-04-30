@@ -214,6 +214,5 @@ __marimo__/
 *.html
 *.png
 *.txt
-# *.json
 logs/
 allure_reports/
