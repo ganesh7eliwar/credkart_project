@@ -35,10 +35,10 @@ pipeline {
 
         stage('Run CredKart Tests') {
             steps {
-                echo 'Running Selenium tests for CredKart...'
+                echo 'Running tests for CredKart...'
                 retry(2) {
                     bat """
-                        %PYTHON% -m pytest -v -s testcases/ --browser ${params.BROWSER} --alluredir=allure_reports -n 4
+                        %PYTHON% -m pytest -vs testcases/ --browser ${params.BROWSER} --alluredir=allure_reports -n 4
                     """
                 }
             }
