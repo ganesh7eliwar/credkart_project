@@ -38,7 +38,7 @@ pipeline {
                 echo 'Running tests for CredKart...'
                 retry(2) {
                     bat """
-                        %PYTHON% -m pytest -vs testcases/ --browser ${params.BROWSER} --alluredir=allure_reports -n 4
+                        %PYTHON% -m pytest -vs testcases/ --browser ${params.BROWSER} --alluredir=allure_reports
                     """
                 }
             }
