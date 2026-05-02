@@ -5808,3 +5808,304 @@
 2026-04-30 22:06:49,598 | INFO | TestLoginParam | test_login_param | 140 | Status List: ['Pass']
 2026-04-30 22:06:49,608 | INFO | TestLoginParam | test_login_param | 141 | Test "Test_Login_DDT" Passed.
 2026-04-30 22:06:49,609 | INFO | TestLoginParam | test_login_param | 150 | ========== Test Session Finished. ==========
+2026-05-02 19:08:18,710 | INFO | TestURLCheck | test_url_check | 72 | ********** Test Session Started. **********
+2026-05-02 19:08:18,713 | INFO | TestURLCheck | test_url_check | 74 | Driver Setup Successful.
+2026-05-02 19:08:18,714 | INFO | TestURLCheck | test_url_check | 75 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="677814a24c938e41ee2d87b5800296e9")>
+2026-05-02 19:08:18,731 | INFO | TestURLCheck | test_url_check | 79 | Entered into If Block.
+2026-05-02 19:08:18,742 | INFO | TestURLCheck | test_url_check | 80 | Title of the Page is: CredKart
+2026-05-02 19:08:18,743 | INFO | TestURLCheck | test_url_check | 81 | Test URL Check Passed
+2026-05-02 19:08:18,990 | INFO | TestURLCheck | test_url_check | 83 | Screenshot Captured.
+2026-05-02 19:08:18,991 | INFO | TestURLCheck | test_url_check | 93 | ========== Test Session Finished. ==========
+2026-05-02 19:08:25,135 | INFO | TestRegister | test_register | 77 | ********** Test Session Started. **********
+2026-05-02 19:08:25,248 | INFO | TestRegister | test_register | 79 | Driver Setup Successful.
+2026-05-02 19:08:25,256 | INFO | TestRegister | test_register | 81 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="46a950e7219427da638665957d337dd4")>
+2026-05-02 19:08:43,827 | INFO | TestLogin | test_login | 77 | ********** Test Session Started. **********
+2026-05-02 19:08:43,828 | INFO | TestLogin | test_login | 79 | Driver Setup Successful.
+2026-05-02 19:08:43,829 | INFO | TestLogin | test_login | 80 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="921a34d37c1751ccd55f515373863aee")>
+2026-05-02 19:09:02,071 | INFO | TestEndToEnd | test_end_to_end | 97 | ********** Test Session Started. **********
+2026-05-02 19:09:02,073 | INFO | TestEndToEnd | test_end_to_end | 100 | Driver Setup Successful.
+2026-05-02 19:09:02,074 | INFO | TestEndToEnd | test_end_to_end | 101 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="e57322875da86c4ca26cc03d8c912808")>
+2026-05-02 19:09:20,428 | INFO | TestAddItemToCart | test_add_item_to_cart | 81 | ********** Test Session Started. **********
+2026-05-02 19:09:20,432 | INFO | TestAddItemToCart | test_add_item_to_cart | 84 | Driver Setup Successful.
+2026-05-02 19:09:20,433 | INFO | TestAddItemToCart | test_add_item_to_cart | 85 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="eba993d2a1bf3bd3f58c615a54383171")>
+2026-05-02 19:09:36,092 | INFO | TestEmptyCart | test_empty_cart | 81 | ********** Test Session Started. **********
+2026-05-02 19:09:36,097 | INFO | TestEmptyCart | test_empty_cart | 84 | Driver Setup Successful.
+2026-05-02 19:09:36,098 | INFO | TestEmptyCart | test_empty_cart | 85 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="2ea082bbe4d668c7d6d15ff2ee32696e")>
+2026-05-02 19:09:54,976 | INFO | TestEmptyWishlist | test_empty_wishlist | 84 | ********** Test Session Started. **********
+2026-05-02 19:09:54,988 | INFO | TestEmptyWishlist | test_empty_wishlist | 87 | Driver Setup Successful.
+2026-05-02 19:09:54,994 | INFO | TestEmptyWishlist | test_empty_wishlist | 88 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="eef3fa0f0a5eba8a51b257d150558038")>
+2026-05-02 19:10:12,556 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 81 | ********** Test Session Started. **********
+2026-05-02 19:10:12,560 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 84 | Driver Setup Successful.
+2026-05-02 19:10:12,560 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 85 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="188d0c68829f878f67ec45f517158234")>
+2026-05-02 19:10:28,598 | INFO | TestLoginDDT | test_login_ddt | 92 | ********** Test Session Started. **********
+2026-05-02 19:10:28,601 | INFO | TestLoginDDT | test_login_ddt | 94 | Driver Setup Successful.
+2026-05-02 19:10:28,601 | INFO | TestLoginDDT | test_login_ddt | 95 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="c67cfaccabbc81a0eb1279380178509f")>
+2026-05-02 19:10:28,674 | INFO | TestLoginDDT | test_login_ddt | 97 | Number of Rows in Table: 5 including Header.
+2026-05-02 19:10:28,675 | INFO | TestLoginDDT | test_login_ddt | 106 | Entered into for loop, Interation No.: 1.
+2026-05-02 19:10:46,449 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:10:46,458 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:10:46,459 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="4b6024a60116e6891e2b51ee4673ed05")>
+2026-05-02 19:11:02,856 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:11:02,859 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:11:02,862 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="e04e2940e89040dfff84c8485ee12624")>
+2026-05-02 19:11:19,761 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:11:19,787 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:11:19,813 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="157ffc97162cfc24b49a471a93ec915d")>
+2026-05-02 19:11:37,929 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:11:37,930 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:11:37,931 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="57d8489ebcea1c7937b42c62dba1e3de")>
+2026-05-02 19:12:23,189 | INFO | TestURLCheck | test_url_check | 72 | ********** Test Session Started. **********
+2026-05-02 19:12:23,196 | INFO | TestURLCheck | test_url_check | 74 | Driver Setup Successful.
+2026-05-02 19:12:23,197 | INFO | TestURLCheck | test_url_check | 75 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="9afc36f9dbf3a0b0e760089657884bda")>
+2026-05-02 19:12:27,034 | INFO | TestURLCheck | test_url_check | 79 | Entered into If Block.
+2026-05-02 19:12:27,050 | INFO | TestURLCheck | test_url_check | 80 | Title of the Page is: CredKart
+2026-05-02 19:12:27,061 | INFO | TestURLCheck | test_url_check | 81 | Test URL Check Passed
+2026-05-02 19:12:27,373 | INFO | TestURLCheck | test_url_check | 83 | Screenshot Captured.
+2026-05-02 19:12:27,375 | INFO | TestURLCheck | test_url_check | 93 | ========== Test Session Finished. ==========
+2026-05-02 19:12:34,575 | INFO | TestRegister | test_register | 77 | ********** Test Session Started. **********
+2026-05-02 19:12:34,576 | INFO | TestRegister | test_register | 79 | Driver Setup Successful.
+2026-05-02 19:12:34,577 | INFO | TestRegister | test_register | 81 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="c9d4fbc048c8c20c92deeb16eaa217d4")>
+2026-05-02 19:12:35,489 | INFO | TestRegister | test_register | 86 | Clicked on Register Button Link and navigate to Register Page.
+2026-05-02 19:12:35,729 | INFO | TestRegister | test_register | 91 | Entered Name in Name Text Box. --> Kelley Crane
+2026-05-02 19:12:36,193 | INFO | TestRegister | test_register | 95 | Entered Email in Email Text Box. --> kelley_crane@rediffmail.com
+2026-05-02 19:12:36,507 | INFO | TestRegister | test_register | 99 | Entered Password in Password Text Box. --> +WE$!oV1T&avo8el
+2026-05-02 19:12:36,860 | INFO | TestRegister | test_register | 103 | Entered Password in Confirm Password Text Box. +WE$!oV1T&avo8el
+2026-05-02 19:12:38,859 | INFO | TestRegister | test_register | 108 | Clicked on Register Button.
+2026-05-02 19:12:38,941 | INFO | TestRegister | test_register | 113 | Entered info If block.
+2026-05-02 19:12:38,979 | INFO | TestRegister | test_register | 114 | Kelley Crane == Kelley Crane
+2026-05-02 19:12:38,982 | INFO | TestRegister | test_register | 115 | User Registration Successful.
+2026-05-02 19:12:38,983 | INFO | TestRegister | test_register | 116 | Test Register Passed.
+2026-05-02 19:12:39,160 | INFO | TestRegister | test_register | 118 | Captured Screenshot.
+2026-05-02 19:12:39,416 | INFO | TestRegister | test_register | 135 | Saving User Details to JSON File.
+2026-05-02 19:12:39,418 | INFO | TestRegister | test_register | 145 | User Details saved to all_user_details.json file.
+2026-05-02 19:12:39,421 | INFO | TestRegister | test_register | 155 | Appending new user details to all_user_details list.
+2026-05-02 19:12:39,423 | INFO | TestRegister | test_register | 161 | ========== Test Session Finished. ==========
+2026-05-02 19:12:48,850 | INFO | TestLogin | test_login | 77 | ********** Test Session Started. **********
+2026-05-02 19:12:48,852 | INFO | TestLogin | test_login | 79 | Driver Setup Successful.
+2026-05-02 19:12:48,853 | INFO | TestLogin | test_login | 80 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="afad94063bdffc7c19f6ef75826ce452")>
+2026-05-02 19:12:49,913 | INFO | TestLogin | test_login | 86 | Clicked on Login Button Link and navigate to Login Page.
+2026-05-02 19:12:50,461 | INFO | TestLogin | test_login | 91 | Entered Name in Name Text Box. --> kelley_crane@rediffmail.com
+2026-05-02 19:12:50,671 | INFO | TestLogin | test_login | 96 | Entered Password in Name Text Box. --> +WE$!oV1T&avo8el
+2026-05-02 19:12:52,893 | INFO | TestLogin | test_login | 101 | Clicked on Login Button.
+2026-05-02 19:12:53,021 | INFO | TestLogin | test_login | 106 | Entered info If block.
+2026-05-02 19:12:53,022 | INFO | TestLogin | test_login | 107 | User Login Successful.
+2026-05-02 19:12:53,023 | INFO | TestLogin | test_login | 108 | Test Login Passed.
+2026-05-02 19:12:53,324 | INFO | TestLogin | test_login | 110 | Captured Screenshot.
+2026-05-02 19:12:55,402 | INFO | TestLogin | test_login | 117 | Clicked on Logout Button
+2026-05-02 19:12:55,405 | INFO | TestLogin | test_login | 131 | ========== Test Session Finished. ==========
+2026-05-02 19:13:08,540 | INFO | TestEndToEnd | test_end_to_end | 97 | ********** Test Session Started. **********
+2026-05-02 19:13:08,578 | INFO | TestEndToEnd | test_end_to_end | 100 | Driver Setup Successful.
+2026-05-02 19:13:08,588 | INFO | TestEndToEnd | test_end_to_end | 101 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="0b4b026cc37bed17d4234299b6301dd6")>
+2026-05-02 19:13:10,078 | INFO | TestEndToEnd | test_end_to_end | 103 | Clicked on Login Button Link and navigate to Login Page.
+2026-05-02 19:13:10,361 | INFO | TestEndToEnd | test_end_to_end | 105 | Entered Name in Name Text Box. --> kelley_crane@rediffmail.com
+2026-05-02 19:13:10,513 | INFO | TestEndToEnd | test_end_to_end | 107 | Entered Password in Password Text Box. --> +WE$!oV1T&avo8el
+2026-05-02 19:13:12,706 | INFO | TestEndToEnd | test_end_to_end | 109 | Clicked on Login Button.
+2026-05-02 19:13:12,712 | INFO | TestEndToEnd | test_end_to_end | 116 | Interation No: 1
+2026-05-02 19:13:13,423 | INFO | TestEndToEnd | test_end_to_end | 118 | Item Selected.
+2026-05-02 19:13:14,556 | INFO | TestEndToEnd | test_end_to_end | 120 | Item Added To Cart.
+2026-05-02 19:13:15,235 | INFO | TestEndToEnd | test_end_to_end | 122 | Clicked on Continue Shopping Button.
+2026-05-02 19:13:15,236 | INFO | TestEndToEnd | test_end_to_end | 116 | Interation No: 2
+2026-05-02 19:13:15,877 | INFO | TestEndToEnd | test_end_to_end | 118 | Item Selected.
+2026-05-02 19:13:16,961 | INFO | TestEndToEnd | test_end_to_end | 120 | Item Added To Cart.
+2026-05-02 19:13:17,631 | INFO | TestEndToEnd | test_end_to_end | 122 | Clicked on Continue Shopping Button.
+2026-05-02 19:13:17,632 | INFO | TestEndToEnd | test_end_to_end | 116 | Interation No: 3
+2026-05-02 19:13:18,328 | INFO | TestEndToEnd | test_end_to_end | 118 | Item Selected.
+2026-05-02 19:13:19,459 | INFO | TestEndToEnd | test_end_to_end | 120 | Item Added To Cart.
+2026-05-02 19:13:20,138 | INFO | TestEndToEnd | test_end_to_end | 122 | Clicked on Continue Shopping Button.
+2026-05-02 19:13:20,946 | INFO | TestEndToEnd | test_end_to_end | 125 | Clicked on Cart Button.
+2026-05-02 19:13:21,412 | INFO | TestEndToEnd | test_end_to_end | 129 | Entered info First If block.
+2026-05-02 19:13:21,706 | INFO | TestEndToEnd | test_end_to_end | 130 | Both Expected Subtotal: 1499.97 and Actual Subtotal: 1499.97 are Equal.
+2026-05-02 19:13:22,095 | INFO | TestEndToEnd | test_end_to_end | 135 | Entered info Second If block.
+2026-05-02 19:13:22,393 | INFO | TestEndToEnd | test_end_to_end | 136 | Both Expected Grand Total: 1694.97 and Actual Grand Total: 1694.97 are Equal.
+2026-05-02 19:13:24,415 | INFO | TestEndToEnd | test_end_to_end | 140 | Clicked on Proceed to Checkout Button.
+2026-05-02 19:13:24,584 | INFO | TestEndToEnd | test_end_to_end | 142 | Entered First Name. --> Kelley
+2026-05-02 19:13:24,719 | INFO | TestEndToEnd | test_end_to_end | 144 | Entered Last Name. --> Crane
+2026-05-02 19:13:24,911 | INFO | TestEndToEnd | test_end_to_end | 146 | Entered Phone Number. --> 1113905214
+2026-05-02 19:13:25,110 | INFO | TestEndToEnd | test_end_to_end | 148 | Entered Address. --> Beside PWD office, Shivaji Nagar
+2026-05-02 19:13:25,239 | INFO | TestEndToEnd | test_end_to_end | 150 | Entered Zip Code. --> 431104
+2026-05-02 19:13:25,460 | INFO | TestEndToEnd | test_end_to_end | 152 | Entered City Name.
+2026-05-02 19:13:25,592 | INFO | TestEndToEnd | test_end_to_end | 154 | Entered Owner Details. --> Kelley Crane
+2026-05-02 19:13:26,130 | INFO | TestEndToEnd | test_end_to_end | 157 | Entered Card Number. --> ['5281', '0370', '4891', '6168']
+2026-05-02 19:13:26,364 | INFO | TestEndToEnd | test_end_to_end | 159 | Entered Expiry Year.
+2026-05-02 19:13:26,533 | INFO | TestEndToEnd | test_end_to_end | 161 | Entered Expiry Month.
+2026-05-02 19:13:27,779 | INFO | TestEndToEnd | test_end_to_end | 163 | Clicked on Continue to Checkout Button.
+2026-05-02 19:13:27,856 | INFO | TestEndToEnd | test_end_to_end | 166 | Entered info Third If block.
+2026-05-02 19:13:27,898 | INFO | TestEndToEnd | test_end_to_end | 167 | Order Placed Successfully, Order Number is: "8078497".
+2026-05-02 19:13:28,129 | INFO | TestEndToEnd | test_end_to_end | 169 | Captured Screenshot.
+2026-05-02 19:13:28,457 | INFO | TestEndToEnd | test_end_to_end | 172 | Clicked on Logout Dropdown Button.
+2026-05-02 19:13:28,614 | INFO | TestEndToEnd | test_end_to_end | 174 | Clicked on Logout Button.
+2026-05-02 19:13:28,618 | INFO | TestEndToEnd | test_end_to_end | 175 | Test "End To End" Passed.
+2026-05-02 19:13:28,619 | INFO | TestEndToEnd | test_end_to_end | 186 | ========== Test Session Finished. ==========
+2026-05-02 19:13:36,568 | INFO | TestAddItemToCart | test_add_item_to_cart | 81 | ********** Test Session Started. **********
+2026-05-02 19:13:36,569 | INFO | TestAddItemToCart | test_add_item_to_cart | 84 | Driver Setup Successful.
+2026-05-02 19:13:36,570 | INFO | TestAddItemToCart | test_add_item_to_cart | 85 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="cef5f347ff56d718e29198be78b23751")>
+2026-05-02 19:13:37,335 | INFO | TestAddItemToCart | test_add_item_to_cart | 90 | Clicked on Login Button Link and navigate to Login Page.
+2026-05-02 19:13:37,664 | INFO | TestAddItemToCart | test_add_item_to_cart | 92 | Entered Name in Name Text Box. --> kelley_crane@rediffmail.com
+2026-05-02 19:13:37,836 | INFO | TestAddItemToCart | test_add_item_to_cart | 94 | Entered Password in Password Text Box. --> +WE$!oV1T&avo8el
+2026-05-02 19:13:39,965 | INFO | TestAddItemToCart | test_add_item_to_cart | 96 | Clicked on Login Button.
+2026-05-02 19:13:40,647 | INFO | TestAddItemToCart | test_add_item_to_cart | 102 | Item Selected.
+2026-05-02 19:13:41,763 | INFO | TestAddItemToCart | test_add_item_to_cart | 106 | Item Added To Cart.
+2026-05-02 19:13:41,859 | INFO | TestAddItemToCart | test_add_item_to_cart | 111 | Entered info If block.
+2026-05-02 19:13:41,861 | INFO | TestAddItemToCart | test_add_item_to_cart | 112 | Item Added Successfully.
+2026-05-02 19:13:42,403 | INFO | TestAddItemToCart | test_add_item_to_cart | 114 | Captured Screenshot.
+2026-05-02 19:13:43,193 | INFO | TestAddItemToCart | test_add_item_to_cart | 120 | Clicked on Continue Shopping Button.
+2026-05-02 19:13:43,427 | INFO | TestAddItemToCart | test_add_item_to_cart | 122 | Clicked on Logout Dropdown Button.
+2026-05-02 19:13:44,907 | INFO | TestAddItemToCart | test_add_item_to_cart | 124 | Clicked on Logout Button.
+2026-05-02 19:13:44,907 | INFO | TestAddItemToCart | test_add_item_to_cart | 125 | Test "Add Item To Cart" Passed.
+2026-05-02 19:13:44,908 | INFO | TestAddItemToCart | test_add_item_to_cart | 139 | ========== Test Session Finished. ==========
+2026-05-02 19:13:54,503 | INFO | TestEmptyCart | test_empty_cart | 81 | ********** Test Session Started. **********
+2026-05-02 19:13:54,509 | INFO | TestEmptyCart | test_empty_cart | 84 | Driver Setup Successful.
+2026-05-02 19:13:54,509 | INFO | TestEmptyCart | test_empty_cart | 85 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="f1a9d9655492084b0e3456856c839d96")>
+2026-05-02 19:13:56,425 | INFO | TestEmptyCart | test_empty_cart | 87 | Clicked on Login Button Link and navigate to Login Page.
+2026-05-02 19:13:56,663 | INFO | TestEmptyCart | test_empty_cart | 89 | Entered Name in Name Text Box. --> kelley_crane@rediffmail.com
+2026-05-02 19:13:56,884 | INFO | TestEmptyCart | test_empty_cart | 91 | Entered Password in Password Text Box. --> +WE$!oV1T&avo8el
+2026-05-02 19:13:58,898 | INFO | TestEmptyCart | test_empty_cart | 93 | Clicked on Login Button.
+2026-05-02 19:13:59,680 | INFO | TestEmptyCart | test_empty_cart | 97 | Item Selected.
+2026-05-02 19:14:00,783 | INFO | TestEmptyCart | test_empty_cart | 99 | Item Added To Cart.
+2026-05-02 19:14:00,967 | INFO | TestEmptyCart | test_empty_cart | 103 | Clicked on Empty Cart Button.
+2026-05-02 19:14:01,983 | INFO | TestEmptyCart | test_empty_cart | 106 | Entered info If block.
+2026-05-02 19:14:01,986 | INFO | TestEmptyCart | test_empty_cart | 107 | Item Removed From Cart Successfully.
+2026-05-02 19:14:02,203 | INFO | TestEmptyCart | test_empty_cart | 109 | Captured Screenshot.
+2026-05-02 19:14:02,509 | INFO | TestEmptyCart | test_empty_cart | 112 | Clicked on Logout Dropdown Button.
+2026-05-02 19:14:03,982 | INFO | TestEmptyCart | test_empty_cart | 114 | Clicked on Logout Button.
+2026-05-02 19:14:03,996 | INFO | TestEmptyCart | test_empty_cart | 115 | Test "Test Empty Cart" Passed.
+2026-05-02 19:14:04,025 | INFO | TestEmptyCart | test_empty_cart | 126 | ========== Test Session Finished. ==========
+2026-05-02 19:14:11,798 | INFO | TestEmptyWishlist | test_empty_wishlist | 84 | ********** Test Session Started. **********
+2026-05-02 19:14:11,803 | INFO | TestEmptyWishlist | test_empty_wishlist | 87 | Driver Setup Successful.
+2026-05-02 19:14:11,804 | INFO | TestEmptyWishlist | test_empty_wishlist | 88 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="54e16bdcdbc2545f80fce3e14559d241")>
+2026-05-02 19:14:12,597 | INFO | TestEmptyWishlist | test_empty_wishlist | 92 | Clicked on Login Button Link and navigate to Login Page.
+2026-05-02 19:14:12,920 | INFO | TestEmptyWishlist | test_empty_wishlist | 94 | Entered Name in Name Text Box. --> kelley_crane@rediffmail.com
+2026-05-02 19:14:13,080 | INFO | TestEmptyWishlist | test_empty_wishlist | 96 | Entered Password in Password Text Box. --> +WE$!oV1T&avo8el
+2026-05-02 19:14:15,105 | INFO | TestEmptyWishlist | test_empty_wishlist | 98 | Clicked on Login Button.
+2026-05-02 19:14:15,799 | INFO | TestEmptyWishlist | test_empty_wishlist | 103 | Item Selected.
+2026-05-02 19:14:15,964 | INFO | TestEmptyWishlist | test_empty_wishlist | 108 | Item was Added to Wishlist.
+2026-05-02 19:14:17,671 | INFO | TestEmptyWishlist | test_empty_wishlist | 112 | Clicked on Wishlist Button.
+2026-05-02 19:14:18,774 | INFO | TestEmptyWishlist | test_empty_wishlist | 117 | Clicked on Empty Wishlist Button.
+2026-05-02 19:14:18,837 | INFO | TestEmptyWishlist | test_empty_wishlist | 121 | Entered info If block.
+2026-05-02 19:14:18,838 | INFO | TestEmptyWishlist | test_empty_wishlist | 122 | Item Removed From Wishlist Successfully.
+2026-05-02 19:14:19,013 | INFO | TestEmptyWishlist | test_empty_wishlist | 124 | Captured Screenshot.
+2026-05-02 19:14:19,289 | INFO | TestEmptyWishlist | test_empty_wishlist | 129 | Clicked on Logout Dropdown Button.
+2026-05-02 19:14:19,494 | INFO | TestEmptyWishlist | test_empty_wishlist | 131 | Clicked on Logout Button.
+2026-05-02 19:14:19,495 | INFO | TestEmptyWishlist | test_empty_wishlist | 132 | Test "Test Empty Wishlist" Passed.
+2026-05-02 19:14:19,496 | INFO | TestEmptyWishlist | test_empty_wishlist | 143 | ========== Test Session Finished. ==========
+2026-05-02 19:14:28,075 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 81 | ********** Test Session Started. **********
+2026-05-02 19:14:28,080 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 84 | Driver Setup Successful.
+2026-05-02 19:14:28,080 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 85 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="82872e8834861f0d0546e3f307627c38")>
+2026-05-02 19:14:29,072 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 87 | Clicked on Login Button Link and navigate to Login Page.
+2026-05-02 19:14:29,461 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 89 | Entered Name in Name Text Box. --> kelley_crane@rediffmail.com
+2026-05-02 19:14:29,618 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 91 | Entered Password in Password Text Box. --> +WE$!oV1T&avo8el
+2026-05-02 19:14:31,949 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 93 | Clicked on Login Button.
+2026-05-02 19:14:32,659 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 97 | Item Selected.
+2026-05-02 19:14:33,867 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 101 | Item was Added to Wishlist.
+2026-05-02 19:14:33,963 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 104 | Entered info If block.
+2026-05-02 19:14:33,964 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 105 | Item Added Wishlist Successfully.
+2026-05-02 19:14:34,223 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 107 | Captured Screenshot.
+2026-05-02 19:14:34,648 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 110 | Clicked on Logout Dropdown Button.
+2026-05-02 19:14:34,826 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 112 | Clicked on Logout Button.
+2026-05-02 19:14:34,828 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 113 | Test "Add Item To Wishlist" Passed.
+2026-05-02 19:14:34,829 | INFO | TestAddItemToWishlist | test_add_item_to_wishlist | 124 | ========== Test Session Finished. ==========
+2026-05-02 19:14:42,058 | INFO | TestLoginDDT | test_login_ddt | 92 | ********** Test Session Started. **********
+2026-05-02 19:14:42,063 | INFO | TestLoginDDT | test_login_ddt | 94 | Driver Setup Successful.
+2026-05-02 19:14:42,064 | INFO | TestLoginDDT | test_login_ddt | 95 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="94b29f0a3ea7865ffb21af63dc697683")>
+2026-05-02 19:14:42,209 | INFO | TestLoginDDT | test_login_ddt | 97 | Number of Rows in Table: 5 including Header.
+2026-05-02 19:14:42,210 | INFO | TestLoginDDT | test_login_ddt | 106 | Entered into for loop, Interation No.: 1.
+2026-05-02 19:14:43,069 | INFO | TestLoginDDT | test_login_ddt | 114 | Clicked on Login Button.
+2026-05-02 19:14:43,399 | INFO | TestLoginDDT | test_login_ddt | 116 | Entered Email Address: david_shearing@yahoomail.com.
+2026-05-02 19:14:43,848 | INFO | TestLoginDDT | test_login_ddt | 118 | Entered Password: $lA6(3Bg1#vI!uzFE.
+2026-05-02 19:14:45,875 | INFO | TestLoginDDT | test_login_ddt | 120 | Clicked on Login Button.
+2026-05-02 19:14:45,878 | INFO | TestLoginDDT | test_login_ddt | 123 | Entered into If Block.
+2026-05-02 19:14:45,972 | INFO | TestLoginDDT | test_login_ddt | 125 | Entered into Nested If Block within If Block.
+2026-05-02 19:14:45,973 | INFO | TestLoginDDT | test_login_ddt | 127 | Appended data to Status List.
+2026-05-02 19:14:46,102 | INFO | TestLoginDDT | test_login_ddt | 129 | Clicked on Logout DropDown Button.
+2026-05-02 19:14:46,263 | INFO | TestLoginDDT | test_login_ddt | 131 | Clicked on Logout Button.
+2026-05-02 19:14:46,263 | INFO | TestLoginDDT | test_login_ddt | 106 | Entered into for loop, Interation No.: 2.
+2026-05-02 19:14:48,328 | INFO | TestLoginDDT | test_login_ddt | 114 | Clicked on Login Button.
+2026-05-02 19:14:48,516 | INFO | TestLoginDDT | test_login_ddt | 116 | Entered Email Address: david_shearing@yahoomail.com.
+2026-05-02 19:14:48,700 | INFO | TestLoginDDT | test_login_ddt | 118 | Entered Password: $lA6(3g1#vI!uzFE.
+2026-05-02 19:14:49,781 | INFO | TestLoginDDT | test_login_ddt | 120 | Clicked on Login Button.
+2026-05-02 19:14:49,782 | INFO | TestLoginDDT | test_login_ddt | 139 | Entered into Elif Block.
+2026-05-02 19:14:59,816 | INFO | TestLoginDDT | test_login_ddt | 150 | Entered into Else Block.
+2026-05-02 19:14:59,817 | INFO | TestLoginDDT | test_login_ddt | 152 | Appended Data to Status List.
+2026-05-02 19:14:59,818 | INFO | TestLoginDDT | test_login_ddt | 106 | Entered into for loop, Interation No.: 3.
+2026-05-02 19:15:00,577 | INFO | TestLoginDDT | test_login_ddt | 114 | Clicked on Login Button.
+2026-05-02 19:15:00,773 | INFO | TestLoginDDT | test_login_ddt | 116 | Entered Email Address: david_shearing@gmail.com.
+2026-05-02 19:15:00,970 | INFO | TestLoginDDT | test_login_ddt | 118 | Entered Password: $lA6(3Bg1#vI!uzFE.
+2026-05-02 19:15:02,456 | INFO | TestLoginDDT | test_login_ddt | 120 | Clicked on Login Button.
+2026-05-02 19:15:02,457 | INFO | TestLoginDDT | test_login_ddt | 139 | Entered into Elif Block.
+2026-05-02 19:15:12,491 | INFO | TestLoginDDT | test_login_ddt | 150 | Entered into Else Block.
+2026-05-02 19:15:12,492 | INFO | TestLoginDDT | test_login_ddt | 152 | Appended Data to Status List.
+2026-05-02 19:15:12,493 | INFO | TestLoginDDT | test_login_ddt | 106 | Entered into for loop, Interation No.: 4.
+2026-05-02 19:15:13,264 | INFO | TestLoginDDT | test_login_ddt | 114 | Clicked on Login Button.
+2026-05-02 19:15:13,471 | INFO | TestLoginDDT | test_login_ddt | 116 | Entered Email Address: david_shearing@credence.in.
+2026-05-02 19:15:13,648 | INFO | TestLoginDDT | test_login_ddt | 118 | Entered Password: $lA6(3g1#vI!uzFE.
+2026-05-02 19:15:14,849 | INFO | TestLoginDDT | test_login_ddt | 120 | Clicked on Login Button.
+2026-05-02 19:15:14,863 | INFO | TestLoginDDT | test_login_ddt | 139 | Entered into Elif Block.
+2026-05-02 19:15:24,913 | INFO | TestLoginDDT | test_login_ddt | 150 | Entered into Else Block.
+2026-05-02 19:15:24,913 | INFO | TestLoginDDT | test_login_ddt | 152 | Appended Data to Status List.
+2026-05-02 19:15:24,915 | INFO | TestLoginDDT | test_login_ddt | 155 | Entered into If Block for Assertion.
+2026-05-02 19:15:24,915 | INFO | TestLoginDDT | test_login_ddt | 156 | If Fail not in Status List Testcase Passed.
+2026-05-02 19:15:24,916 | INFO | TestLoginDDT | test_login_ddt | 157 | Status List: ['Pass', 'Pass', 'Pass', 'Pass']
+2026-05-02 19:15:24,916 | INFO | TestLoginDDT | test_login_ddt | 158 | Test "Test_Login_DDT" Passed.
+2026-05-02 19:15:24,916 | INFO | TestLoginDDT | test_login_ddt | 167 | ========== Test Session Finished. ==========
+2026-05-02 19:15:34,986 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:15:34,988 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:15:34,989 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="dd1325dfac5f2948c3f210c3a92979e4")>
+2026-05-02 19:15:36,054 | INFO | TestLoginParam | test_login_param | 99 | Clicked on login button.
+2026-05-02 19:15:36,366 | INFO | TestLoginParam | test_login_param | 101 | Inserted data into Email textbox. --> david_shearing@yahoomail.com
+2026-05-02 19:15:36,542 | INFO | TestLoginParam | test_login_param | 103 | Inserted data into first name textbox. --> $lA6(3Bg1#vI!uzFE
+2026-05-02 19:15:38,952 | INFO | TestLoginParam | test_login_param | 105 | Clicked on login button.
+2026-05-02 19:15:38,953 | INFO | TestLoginParam | test_login_param | 108 | Entered into if Block
+2026-05-02 19:15:39,041 | INFO | TestLoginParam | test_login_param | 110 | Entered into Nested if Block
+2026-05-02 19:15:39,042 | INFO | TestLoginParam | test_login_param | 112 | Appended data to Status List.
+2026-05-02 19:15:39,186 | INFO | TestLoginParam | test_login_param | 114 | Clicked on log out dropdown button.
+2026-05-02 19:15:39,364 | INFO | TestLoginParam | test_login_param | 116 | Clicked on log out button
+2026-05-02 19:15:39,365 | INFO | TestLoginParam | test_login_param | 138 | Entered into If Block for Assertion.
+2026-05-02 19:15:39,365 | INFO | TestLoginParam | test_login_param | 139 | If Fail not in Status List Testcase Passed.
+2026-05-02 19:15:39,365 | INFO | TestLoginParam | test_login_param | 140 | Status List: ['Pass']
+2026-05-02 19:15:39,365 | INFO | TestLoginParam | test_login_param | 141 | Test "Test_Login_DDT" Passed.
+2026-05-02 19:15:39,365 | INFO | TestLoginParam | test_login_param | 150 | ========== Test Session Finished. ==========
+2026-05-02 19:15:45,156 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:15:45,169 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:15:45,172 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="57faa58b8f4e7e9ff7efbacb26a15ba1")>
+2026-05-02 19:15:49,290 | INFO | TestLoginParam | test_login_param | 99 | Clicked on login button.
+2026-05-02 19:15:49,557 | INFO | TestLoginParam | test_login_param | 101 | Inserted data into Email textbox. --> david_shearing@yahoomail.com
+2026-05-02 19:15:49,810 | INFO | TestLoginParam | test_login_param | 103 | Inserted data into first name textbox. --> $lA6(3g1#vI!uzFE
+2026-05-02 19:15:51,064 | INFO | TestLoginParam | test_login_param | 105 | Clicked on login button.
+2026-05-02 19:15:51,068 | INFO | TestLoginParam | test_login_param | 123 | Entered into Elif Block.
+2026-05-02 19:16:01,134 | INFO | TestLoginParam | test_login_param | 133 | Entered into Else Block.
+2026-05-02 19:16:01,135 | INFO | TestLoginParam | test_login_param | 135 | Appended Data to Status List.
+2026-05-02 19:16:01,137 | INFO | TestLoginParam | test_login_param | 138 | Entered into If Block for Assertion.
+2026-05-02 19:16:01,138 | INFO | TestLoginParam | test_login_param | 139 | If Fail not in Status List Testcase Passed.
+2026-05-02 19:16:01,140 | INFO | TestLoginParam | test_login_param | 140 | Status List: ['Pass']
+2026-05-02 19:16:01,141 | INFO | TestLoginParam | test_login_param | 141 | Test "Test_Login_DDT" Passed.
+2026-05-02 19:16:01,143 | INFO | TestLoginParam | test_login_param | 150 | ========== Test Session Finished. ==========
+2026-05-02 19:16:12,732 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:16:12,736 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:16:12,736 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="86383682acc193f8d1cd4eb6e834fe98")>
+2026-05-02 19:16:13,958 | INFO | TestLoginParam | test_login_param | 99 | Clicked on login button.
+2026-05-02 19:16:14,494 | INFO | TestLoginParam | test_login_param | 101 | Inserted data into Email textbox. --> david_shearing@gmail.com
+2026-05-02 19:16:14,683 | INFO | TestLoginParam | test_login_param | 103 | Inserted data into first name textbox. --> $lA6(3Bg1#vI!uzFE
+2026-05-02 19:16:16,038 | INFO | TestLoginParam | test_login_param | 105 | Clicked on login button.
+2026-05-02 19:16:16,049 | INFO | TestLoginParam | test_login_param | 123 | Entered into Elif Block.
+2026-05-02 19:16:26,080 | INFO | TestLoginParam | test_login_param | 133 | Entered into Else Block.
+2026-05-02 19:16:26,080 | INFO | TestLoginParam | test_login_param | 135 | Appended Data to Status List.
+2026-05-02 19:16:26,081 | INFO | TestLoginParam | test_login_param | 138 | Entered into If Block for Assertion.
+2026-05-02 19:16:26,081 | INFO | TestLoginParam | test_login_param | 139 | If Fail not in Status List Testcase Passed.
+2026-05-02 19:16:26,083 | INFO | TestLoginParam | test_login_param | 140 | Status List: ['Pass']
+2026-05-02 19:16:26,084 | INFO | TestLoginParam | test_login_param | 141 | Test "Test_Login_DDT" Passed.
+2026-05-02 19:16:26,085 | INFO | TestLoginParam | test_login_param | 150 | ========== Test Session Finished. ==========
+2026-05-02 19:16:40,553 | INFO | TestLoginParam | test_login_param | 91 | ********** Test Session Started. **********
+2026-05-02 19:16:40,556 | INFO | TestLoginParam | test_login_param | 93 | Driver Setup Successful.
+2026-05-02 19:16:40,558 | INFO | TestLoginParam | test_login_param | 94 | Test Run on Driver --> <selenium.webdriver.chrome.webdriver.WebDriver (session="722a90e6aef8e8000902063455eefbe1")>
+2026-05-02 19:16:42,673 | INFO | TestLoginParam | test_login_param | 99 | Clicked on login button.
+2026-05-02 19:16:43,183 | INFO | TestLoginParam | test_login_param | 101 | Inserted data into Email textbox. --> david_shearing@credence.in
+2026-05-02 19:16:43,354 | INFO | TestLoginParam | test_login_param | 103 | Inserted data into first name textbox. --> $lA6(3g1#vI!uzFE
+2026-05-02 19:16:44,709 | INFO | TestLoginParam | test_login_param | 105 | Clicked on login button.
+2026-05-02 19:16:44,712 | INFO | TestLoginParam | test_login_param | 123 | Entered into Elif Block.
+2026-05-02 19:16:54,784 | INFO | TestLoginParam | test_login_param | 133 | Entered into Else Block.
+2026-05-02 19:16:54,784 | INFO | TestLoginParam | test_login_param | 135 | Appended Data to Status List.
+2026-05-02 19:16:54,785 | INFO | TestLoginParam | test_login_param | 138 | Entered into If Block for Assertion.
+2026-05-02 19:16:54,786 | INFO | TestLoginParam | test_login_param | 139 | If Fail not in Status List Testcase Passed.
+2026-05-02 19:16:54,786 | INFO | TestLoginParam | test_login_param | 140 | Status List: ['Pass']
+2026-05-02 19:16:54,788 | INFO | TestLoginParam | test_login_param | 141 | Test "Test_Login_DDT" Passed.
+2026-05-02 19:16:54,788 | INFO | TestLoginParam | test_login_param | 150 | ========== Test Session Finished. ==========
